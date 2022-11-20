@@ -85,13 +85,14 @@
         </div>
     </nav>
     <div class="banner">
-        <img src="/CuaHangNoiThat/public/image/TRANG_TRI_BANNER.jpg" alt="">
+        <img src="/CuaHangNoiThat/public/image/AO_QUAN_BANNER.jpg" alt="">
     </div>
     <h2 class="title">
-        <span>TRANG TRÍ</span>
+        <span>ÁO QUẦN</span>
     </h2>
     <p class="content">
-        Các phụ kiện nhập khẩu từ các hãng thiết kế nội thất uy tín của Australia mang lại điểm nhấn đặc biệt sang trọng cho không gian nội thất
+        Các loại áo quần cao cấp được gia công và nhập khẩu từ các nhãn hiệu lớn ở nước ngoài đảm bảo đem lại cho bạn
+        một trải nghiệm thoải mái nhất và hài lòng nhất
     </p>
 
     <div style="width: 80%;margin-left: 10%;margin-top: 1rem;">

@@ -55,13 +55,13 @@
                     <div class="dropdown-content user" style="margin-top: -0.5rem;">
                         <?php
                         if (!isset($_SESSION['account'])) {
-                            echo '<a href="/CuaHangNoiThat/DangNhap">Đăng nhập</a>';
-                            echo '<a href="/CuaHangNoiThat/DangKy">Đăng ký</a>';
+                            echo '<a href="./DangNhap">Đăng nhập</a>';
+                            echo '<a href="./DangKy">Đăng ký</a>';
                         } else {
-                            echo '<a href="/CuaHangNoiThat/ThayDoiThongTin">Thay đổi thông tin</a>
-                                <a href="/CuaHangNoiThat/DoiMatKhau">Đổi mật khẩu</a>
-                                <a href="/CuaHangNoiThat/LichSuGioHang">Lịch sử</a>
-                                <a href="/CuaHangNoiThat/TrangChu/Logout">Đăng xuất</a>';
+                            echo '<a href="./ThayDoiThongTin">Thay đổi thông tin</a>
+                                <a href="./DoiMatKhau">Đổi mật khẩu</a>
+                                <a href="./LichSuGioHang">Lịch sử</a>
+                                <a href="./TrangChu/Logout">Đăng xuất</a>';
                         }
                         ?>
                     </div>
@@ -84,7 +84,7 @@
         </div>
     </nav>
     <div class="banner">
-        <img src="/CuaHangNoiThat/public/image/BANNER_CHINH_1.jpg" alt="">
+        <img style="object-fit: contain" src="/CuaHangNoiThat/public/image/BANNER-CHINH.png" alt="">
     </div>
 
     <h2 class="title">
@@ -102,43 +102,31 @@
     </div>
 
     <h2 class="title">
-        <span>Nội thất cho ngôi nhà hiện đại</span>
+        <span>Thời trang theo xu hướng giới trẻ</span>
     </h2>
     <p class="content">
-        Cozy được hình thành từ năm 1995 với sứ mệnh mang đến những bộ sưu tập nội thất có thiết kế đương đại,
-        chất lượng vượt trội từ các nước Italy, Đức, Nhật Bản với giá thành hợp lý nhất. Các sản phẩm từ sofa,
-        bàn ăn đến từng lọ hoa trang trí,... tất cả được các Designers đến từ Italy và Australia thiết kế đồng bộ,
-        tạo nên những không gian sống hoàn chỉnh và tinh tế nhất.
+        Cozy được hình thành từ năm 1995 với sứ mệnh mang đến những bộ sưu tập thời trang có thiết kế đương đại,
+        chất lượng vượt trội từ các nước Italy, Đức, Nhật Bản với giá thành hợp lý nhất. Các sản phẩm từ quần áo
+        giày dép, phụ kiện,... tất cả được các Designers đến từ Italy và Australia thiết kế đồng bộ,
+        tạo nên sản phẩm hoàn chỉnh và tinh tế nhất cho người sử dụng.
     </p>
     <div class="category-container">
         <div class="category">
-            <a href="/CuaHangNoiThat/TrangTri">
-                <img src="/CuaHangNoiThat/public/image/cate-5.jpg" alt="cate-1">
-                <p>Trang trí</p>
+            <a href="./AoQuan.php">
+                <img src="/CuaHangNoiThat/public/image/cate-1.jpg" alt="cate-1">
+                <p>Áo & Quần</p>
             </a>
         </div>
         <div class="category">
-            <a href="/CuaHangNoiThat/PhongNgu">
-                <img src="/CuaHangNoiThat/public/image/cate-4.jpg" alt="cate-2">
-                <p>Phòng ngủ</p>
+            <a href="./Balo.php">
+                <img src="/CuaHangNoiThat/public/image/cate-2.jpg" alt="cate-2">
+                <p>Balo</p>
             </a>
         </div>
         <div class="category">
-            <a href="/CuaHangNoiThat/PhongLamViec">
+            <a href="./PhuKien.php">
                 <img src="/CuaHangNoiThat/public/image/cate-3.jpg" alt="cate-3">
-                <p>Phòng làm việc</p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="/CuaHangNoiThat/PhongKhach">
-                <img src="/CuaHangNoiThat/public/image/cate-2.jpg" alt="cate-4">
-                <p>Phòng khách</p>
-            </a>
-        </div>
-        <div class="category">
-            <a href="/CuaHangNoiThat/PhongAn">
-                <img src="/CuaHangNoiThat/public/image/cate-1.jpg" alt="cate-5">
-                <p>Phòng ăn</p>
+                <p>Phụ Kiện</p>
             </a>
         </div>
     </div>
@@ -173,11 +161,11 @@
         </div>
         <div class="info">
             <h2>THIẾT KẾ HIỆN ĐẠI</h2><br>
-            <p>MILD là thương hiệu tiên phong phân phối các sản phẩm bàn ăn cao cấp với mẫu mã và chất liệu đa dạng kết hợp công năng tiện nghi.</p>
-            <p>Các mẫu bàn Ceramic đang được đặc biệt ưa chuộng bởi các đặc điểm ưu việt. Ceramic đã qua xử lý kỹ thuật và được sử dụng trong nội thất cao cấp nhờ tính thẩm mỹ, chống trầy, và độ bền vượt trội, an toàn thân thiện với môi trường, không gây kích ứng khi sử dụng.
-                MILD độc quyền phân phối các sản phẩm nội thất Ceramic Ý cao cấp có độ bóng gấp 3 lần ceramic thông thường.</p>
-            <p>Các mẫu bàn đá marble nguyên khối tự nhiên của MILD được phủ lớp sơn mài bóng chống thấm ẩm, được chế tác thủ công tỉ mỉ đến từng đường nét nhằm đảm bảo độ bền và tính thẩm mỹ cao.</p>
-            <p>Tất cả các bộ sưu tập bàn ăn của MILD đều có thiết kế kết hợp công năng tiện nghi đáp ứng linh hoạt nhiều nhu cầu của khách hàng. Bàn ăn thông minh kéo dãn nhiều cấp độ là sự lựa chọn hoàn hảo cho không gian sang trọng và lịch lãm.</p>
+            <p>MILD là thương hiệu tiên phong phân phối các sản phẩm quần áo cao cấp với mẫu mã và chất liệu đa dạng kết hợp công năng tiện nghi.</p>
+            <p>Các mẫu quần áo đang được đặc biệt ưa chuộng bởi các đặc điểm ưu việt. Chất liệu đã qua xử lý kỹ thuật và được sử dụng trong các sản phẩm cao cấp nhờ tính thẩm mỹ, chống cắt, và độ bền vượt trội, an toàn thân thiện với môi trường, không gây kích ứng khi sử dụng.
+                MILD độc quyền phân phối các sản phẩm quần áo cao cấp .</p>
+            <p>Các mẫu balo với thiết ké tự nhiên của MILD được phủ lớp vải chống thấm nước, được chế tác thủ công tỉ mỉ đến từng đường nét nhằm đảm bảo độ bền và tính thẩm mỹ cao.</p>
+            <p>Tất cả các bộ sưu tập phụ kiện của MILD đều có thiết kế kết hợp công năng tiện nghi đáp ứng linh hoạt nhiều nhu cầu của khách hàng. Dây nịt, áo hoặc dây chuyền đều là lựa chọn thích hợp cho bộ sưu tập thời trang của bạn.</p>
         </div>
     </div><br>
     <div class="footer-container">

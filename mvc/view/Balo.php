@@ -42,7 +42,7 @@
                         <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongLamViec">PHỤ KIỆN CÁC LOẠI</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -86,13 +86,14 @@
         </div>
     </nav>
     <div class="banner">
-        <img src="/CuaHangNoiThat/public/image/BANNER_PHONGNGU.jpg" alt="">
+        <img src="/CuaHangNoiThat/public/image/BANNER_BALO.jpg" alt="">
     </div>
     <h2 class="title">
-        <span>PHÒNG NGỦ</span>
+        <span>BALO</span>
     </h2>
     <p class="content">
-        Các sản phẩm giường ngủ da thật của MILD được bọc bằng chất liệu da bò Ý mềm mại, cao cấp với khung sườn của sản phẩm sử dụng vật liệu thân thiện với môi trường, được chế tạo cẩn thận nhằm đảm bảo chất lượng và tuổi thọ. Với thiết kế độc đáo và đẳng cấp, giường ngủ da thật của MILD mang lại sự thoải mái tuyệt đối trong không gian đẳng cấp.
+        Các sản phẩm BALO được làm theo nhiều phong cách hiện đại, trẻ trung với chất liệu vải cao cấp, chống mài mòn, chống thấm hiệu quả, chống rạch chống cắt.
+        
     </p>
 
     <div style="width: 80%;margin-left: 10%;margin-top: 1rem;">

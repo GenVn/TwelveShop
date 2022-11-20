@@ -33,22 +33,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto " id="lsp">
                     <li class="nav-item active">
-                        <a class="nav-link a active" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">TRANG CHỦ</a>
+                        <a class="nav-link a active" style="cursor: pointer;" href="./TrangChu.php">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/TrangTri">TRANG TRÍ</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="./AoQuan">ÁO & QUẦN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongNgu">PHÒNG NGỦ</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="./Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongLamViec">PHÒNG LÀM VIỆC</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongKhach">PHÒNG KHÁCH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongAn">PHÒNG ĂN</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="./PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -92,14 +86,15 @@
         </div>
     </nav>
     <div class="banner">
-        <img src="/CuaHangNoiThat/public/image/BANNER_PHONGLAMVIEC.jpg" alt="">
+        <img src="/CuaHangNoiThat/public/image/BANNER-PHUKIEN.png" alt="">
     </div>
     <h2 class="title">
-        <span>PHÒNG LÀM VIỆC</span>
+        <span>PHỤ KIỆN THỜI TRANG</span>
     </h2>
     <p class="content">
-        Các sản phẩm dành cho phòng làm việc của MILD được bọc bằng chất liệu ao cấp với khung sườn của sản phẩm sử dụng vật liệu thân thiện với môi trường,
-        được chế tạo cẩn thận nhằm đảm bảo chất lượng và tuổi thọ. Với thiết kế độc đáo và đẳng cấp.
+        Các phụ kiện thời trang được tuyển chọn và gia công tỉ mỉ. Nguyên liệu sản xuất theo quy trình cao cấp.
+        Đảm bảo chất lượng sản phẩm là tốt nhất nhằm đem lại cho khách hàng sử dụng một trải nghiệm thoải mái nhất
+        cũng như đảm bảo được sản phẩm bền và phù hợp phong cách hiện đại
     </p>
     <div style="width: 80%;margin-left: 10%;margin-top: 1rem;">
         <h2 style="font-weight: bolder;">Tìm kiếm</h2>
