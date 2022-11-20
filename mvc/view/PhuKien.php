@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/CuaHangNoiThat/my-css.css">
     <script src="/CuaHangNoiThat/processFunc.js"></script>
-    <title>Phòng làm việc</title>
+    <title>Phụ Kiện</title>
 </head>
 
 <body>
     <div class="header">
         <div class="address">
             <i class="fa fa-map-marker"> Hồ Chí Minh, Việt Nam</i>
-            <i class="fa fa-envelope"> milfuniture@gmail.com</i>
+            <i class="fa fa-envelope"> twelveshop@gmail.com</i>
         </div>
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">

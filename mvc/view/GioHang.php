@@ -25,7 +25,7 @@
     <div class="header">
         <div class="address">
             <i class="fa fa-map-marker"> Hồ Chí Minh, Việt Nam</i>
-            <i class="fa fa-envelope"> milfuniture@gmail.com</i>
+            <i class="fa fa-envelope"> twelveshop@gmail.com</i>
         </div>
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">
