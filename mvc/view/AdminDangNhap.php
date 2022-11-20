@@ -68,7 +68,7 @@
                     $("#errorMessage").html("Mật khẩu không chính xác");
                     $("#errorMessage").show();
                 } else if($result === 'BLOCK'){
-                    $("#errorMessage").html("Tài khoản bạn đã bị khóa. Vui lòng liên hệ mildstore@gmail.com để biết thêm chi tiết");
+                    $("#errorMessage").html("Tài khoản bạn đã bị khóa. Vui lòng liên hệ twelveshop@gmail.com để biết thêm chi tiết");
                     $("#errorMessage").show();
                 }
                 else if($result === 'NOT_ADMIN'){
@@ -78,8 +78,8 @@
                         url: '/CuaHangNoiThat/Admin/DangXuat'
                     })
                 }
-                 else {
-                    window.location.href = "./";
+                if ($result === 'SUCCESS'){
+                    window.location.href = "./Admin";
                 }
             }
         });
