@@ -6,7 +6,7 @@ class ConnectionDB
     protected $dbhost = "127.0.0.1";
     protected $dbuser = "root";
     protected $dbpass = "";
-    protected $db = "cuahangnoithat";
+    protected $db = "twelveshop";
     protected $conn;
 
     function __construct()
