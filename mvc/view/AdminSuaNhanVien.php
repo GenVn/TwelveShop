@@ -116,6 +116,7 @@
                 data:{data:$obj},
                 success: function(data){
                     alert(data);
+                    window.location.href = '../NhanVien'
                 }
             });
         }

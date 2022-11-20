@@ -147,7 +147,7 @@
                 url: '/CuaHangNoiThat/Admin/getAllStaff',
                 success: function(data) {
                     var data = JSON.parse(data);
-
+                    // console.log(data);
                     $xhtml = '<thead>' +
                         '<tr>' +
                         '<th scope="col">#</th>' +
@@ -163,7 +163,7 @@
                         '</tr>' +
                         '</thead><tbody>';
                     for ($i = 0; $i < data.length; $i++) {
-                        console.log(data);
+                        // console.log(data);
                         $xhtml += '<tr>' +
                             '<th scope="row">' + ($i + 1) + '</th>' +
                             '<td>' + data[$i].MANV + '</td>' +
@@ -175,8 +175,8 @@
                             '<td>' + data[$i].TENDN + '</td>' +
                             '<td>' + (data[$i].TRANGTHAI == 1 ? 'Đang hoạt động' : 'Đã khóa') + '</td>' +
                             '<td>';
-                        $rightStaff = data[$i].QUYEN;
-                        if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'e_right')) {
+                        $rightStaff = data[$i].MAQUYEN;
+                        if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'1')) {
                             $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
                                 '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Thông Tin</button></a>';
@@ -277,7 +277,7 @@
                                 '<td>' + (data[$i].TRANGTHAI == 1 ? 'Đang hoạt động' : 'Đã khóa') + '</td>' +
                                 '<td>';
 
-                            $rightStaff = data[$i].QUYEN;
+                            $rightStaff = data[$i].MAQUYEN;
                             if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'e_right')) {
                                 $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
                                     '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
@@ -422,7 +422,7 @@
                             '<td>' + data[$i].TENDN + '</td>' +
                             '<td>' + (data[$i].TRANGTHAI == 1 ? 'Đang hoạt động' : 'Đã khóa') + '</td>' +
                             '<td>';
-                        $rightStaff = data[$i].QUYEN;
+                        $rightStaff = data[$i].MAQUYEN;
                         if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'e_right')) {
                             $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
                                 '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +

@@ -222,7 +222,7 @@
                     var bill = data.bill;
                     var detail = data.detail;
 
-                    console.log(data);
+                    console.log(data.bill);
 
                     $xhtml = '<div>' +
                         '<button class="printBtn btn btn-primary btnControl" style="background-color: red;" onclick="$(\'#printBill\').hide();">Đóng</button>' +

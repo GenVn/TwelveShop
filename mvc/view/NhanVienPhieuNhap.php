@@ -113,7 +113,7 @@
                     url: '/CuaHangNoiThat/Admin/getAllReceipt',
                     success: function(data) {
                         var data = JSON.parse(data);
-                        //console.log(data);
+                        console.log(data);
 
                         $xhtml = '<thead>' +
                             '<tr>' +

@@ -64,7 +64,7 @@ class Admin extends Controller
         $data = $obj->getAllBIll();
         foreach ($data as $key => $value) {
             $staff = $objStaff->getStaffById($value['MANV']);
-            $exStaff = $objStaff->getStaffById($value['MANV_XUAT']);
+            $exStaff = $objStaff->getStaffById($value['MANV']);
             $status = $value['MATRANGTHAI'];
             $customer = $objCustomer->getCutomerById($value['MAKH']);
             $data[$key]['MOTATRANGTHAI'] = $objStatus->getStatusNameById($status)['MOTATRANGTHAI'];
@@ -73,8 +73,8 @@ class Admin extends Controller
             $data[$key]['TENKH'] = $customer['TENKH'];
             $data[$key]['PHANTRAMGIAM'] = $objSale->getSaleById($value['MAKM'])['PHANTRAMGIAM'];
         }
-
         echo json_encode($data);
+        // echo json_encode($this->getModel('NhanVienDB')->getStaffById);
     }
 
     function getBillAndDetail()
@@ -243,7 +243,7 @@ class Admin extends Controller
     {
         $objCus = $this->getModel('KhachHangDB');
 
-        echo json_encode($objCus->getAllCustomer_Stored());
+        echo json_encode($objCus->getAllCustomer());
     }
 
     function block_unblockCutomer($id)
@@ -619,7 +619,7 @@ class Admin extends Controller
         $data = $objStaff->getAllStaff();
         //getRightById
         foreach ($data as $key => $value) {
-            //$data[$key]['RIGHT'] = $objRight->getRightById($value['MAQUYEN']);
+            // $data[$key]['QUYEN'] = $objRight->getRightById($value['MAQUYEN']);
             $data[$key]['STAFF_LOGIN'] = $_SESSION['staff']['MANV'];
         }
         echo json_encode($data);
@@ -1434,7 +1434,7 @@ class Admin extends Controller
             $result['RESULT'] = "NOT_EXISTS";
         } else {
             if ($pass == $cus['MATKHAU']) {
-                if (strpos($cus['QUYEN'], "e_right") === false) {
+                if (strpos($cus['MAQUYEN'], "1" || strpos($cus['MAQUYEN'], "2")) === false) {
                     $result['RESULT'] = "NOT_ADMIN";
                     //echo $cus['QUYEN'].'<br>';
                     $result['DATA'] = $cus;
@@ -1451,7 +1451,7 @@ class Admin extends Controller
                 $result['RESULT'] = "WRONG_PASSWORD";
             }
         }
-        $result['RIGHT'] = $cus['QUYEN'];
+        $result['RIGHT'] = $cus['MAQUYEN'];
         echo json_encode($result);
     }
 

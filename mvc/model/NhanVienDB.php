@@ -29,7 +29,7 @@ class NhanVienDB extends ConnectionDB
     }
     //Cap nhat thong tin nhanvien
     function updateInformationStaff($staff){
-        $qry = "UPDATE `nhanvien` SET `TENNV`='$staff[TENNV]',`NGAYSINH`='$staff[NGAYSINH]',`GIOITINH`='$staff[GIOITINH]',`DIACHI`='$staff[DIACHI]',`SDT`='$staff[SDT]',`MAQUYEN`='',`TENDN`='$staff[TENDN]',`MATKHAU`='$staff[MATKHAU]' WHERE `MANV`='$staff[MANV]';";
+        $qry = "UPDATE `nhanvien` SET `TENNV`='$staff[TENNV]',`NGAYSINH`='$staff[NGAYSINH]',`GIOITINH`='$staff[GIOITINH]',`DIACHI`='$staff[DIACHI]',`SDT`='$staff[SDT]',`MAQUYEN`='2',`TENDN`='$staff[TENDN]',`MATKHAU`='$staff[MATKHAU]' WHERE `MANV`='$staff[MANV]';";
         
         if(mysqli_query($this->conn,$qry)){
             return true;

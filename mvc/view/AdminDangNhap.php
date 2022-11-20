@@ -78,9 +78,7 @@
                         url: '/CuaHangNoiThat/Admin/DangXuat'
                     })
                 }
-                if ($result === 'SUCCESS'){
-                    window.location.href = "./Admin";
-                }
+                window.location.href = '../Admin'
             }
         });
 

@@ -135,6 +135,7 @@
                 $.ajax({
                     url: "/CuaHangNoiThat/Admin/getAllBill",
                     success: function(data) {
+                        console.log(JSON.parse(data))
                         var data = JSON.parse(data);
                         var xhtml = '<thead>' +
                             '<tr>' +
