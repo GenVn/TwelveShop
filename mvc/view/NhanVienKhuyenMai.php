@@ -40,7 +40,7 @@
 
 
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/NhanVien/ThemKhuyenMai"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm khuyến mãi</button></a>
+        <a href="/TwelveShop/NhanVien/ThemKhuyenMai"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm khuyến mãi</button></a>
     </div>
 
 
@@ -53,7 +53,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllSale',
+                url: '/TwelveShop/Admin/getAllSale',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -115,7 +115,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllSale',
+                url: '/TwelveShop/Admin/getAllSale',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -184,7 +184,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/disabledSale/' + $id,
+                url: '/TwelveShop/Admin/disabledSale/' + $id,
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);

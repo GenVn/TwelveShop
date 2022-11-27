@@ -33,7 +33,7 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/NhanVien/PhieuNhap"><button type="button" class="btn btn-primary">Trở Về</button></a>
+        <a href="/TwelveShop/NhanVien/PhieuNhap"><button type="button" class="btn btn-primary">Trở Về</button></a>
     </div>
     <div style="width: 80%;margin-left: 10%;margin-top: 1rem;">
 
@@ -121,7 +121,7 @@
         function loadTable() {
             $(document).ready(function() {
                 $.ajax({
-                    url: "/CuaHangNoiThat/Admin/getAllBill",
+                    url: "/TwelveShop/Admin/getAllBill",
                     success: function(data) {
                         var data = JSON.parse(data);
                         var xhtml = '<thead>' +
@@ -153,7 +153,7 @@
                             }
 
                             xhtml += 
-                                '<a href="/CuaHangNoiThat/NhanVien/XemChiTietPX/' + data[i].MAHD + '">' +
+                                '<a href="/TwelveShop/NhanVien/XemChiTietPX/' + data[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -173,7 +173,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/updateBillStatus/TT02',
+                url: '/TwelveShop/Admin/updateBillStatus/TT02',
                 data: {
                     'id': $id
                 },
@@ -195,7 +195,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/updateBillStatus/TT05',
+                url: '/TwelveShop/Admin/updateBillStatus/TT05',
                 data: {
                     'id': $id
                 },
@@ -212,7 +212,7 @@
         //Xem chi tiet hoa don
         function viewBillDetail($id) {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getBillAndDetail',
+                url: '/TwelveShop/Admin/getBillAndDetail',
                 data: {
                     'id': $id
                 },
@@ -330,7 +330,7 @@
             }
 
             $.ajax({
-                url: "/CuaHangNoiThat/Admin/getAllBill",
+                url: "/TwelveShop/Admin/getAllBill",
                 success: function(data) {
                     var data = JSON.parse(data);
                     var xhtml = '<thead>' +
@@ -385,7 +385,7 @@
                             }
 
                             xhtml += '<button  onclick="viewBillDetail(\'' + data[i]['MAHD'] + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In phiếu xuất</button>' +
-                                '<a href="/CuaHangNoiThat/NhanVien/XemChiTietPX/' + data[i].MAHD + '">' +
+                                '<a href="/TwelveShop/NhanVien/XemChiTietPX/' + data[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -402,7 +402,7 @@
         function exportExcel() {
             //<a href="">
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/ExportBillToExcel',
+                url: '/TwelveShop/Admin/ExportBillToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     console.log(data);

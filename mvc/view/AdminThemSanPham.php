@@ -38,7 +38,7 @@
 
       <input type="file" class="form-control-file" id="exampleFormControlFile1">
     </div>
-    <a href="/CuaHangNoiThat/Admin/SanPham">
+    <a href="/TwelveShop/Admin/SanPham">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Sản Phẩm</button>

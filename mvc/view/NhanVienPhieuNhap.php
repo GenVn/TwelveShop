@@ -24,8 +24,8 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/NhanVien/ThemPhieuNhap"><button type="button" class="btn btn-primary">Thêm Phiếu Nhập Kho</button></a>
-        <a href="/CuaHangNoiThat/NhanVien/PhieuXuatKho"><button type="button" class="btn btn-primary">Phiếu Xuất Kho</button></a>
+        <a href="/TwelveShop/NhanVien/ThemPhieuNhap"><button type="button" class="btn btn-primary">Thêm Phiếu Nhập Kho</button></a>
+        <a href="/TwelveShop/NhanVien/PhieuXuatKho"><button type="button" class="btn btn-primary">Phiếu Xuất Kho</button></a>
         <button onclick="exportExcel();" type="button" class="btn btn-primary">Xuất Excel</button>
         <div class="form-group" style="width: 50%;float: right;margin-left: 2rem;">
             <input type="email" class="form-control" id="searchReceipt" placeholder="Nhập vào thông tin cần tìm..." style="float: right;width: 20rem;">
@@ -110,7 +110,7 @@
         function loadTable() {
             $(document).ready(function() {
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllReceipt',
+                    url: '/TwelveShop/Admin/getAllReceipt',
                     success: function(data) {
                         var data = JSON.parse(data);
                         console.log(data);
@@ -138,7 +138,7 @@
                                 '<th scope="col">' + formatter.format(data[$i].TONG) + '</th>' +
                                 '<td>' +
                                 '<button onclick="viewBillDetail(\''+data[$i].MAPN+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In phiếu nhập</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/XemChiTietPhieuNhap/'+data[$i].MAPN+'">' +
+                                '<a href="/TwelveShop/Admin/XemChiTietPhieuNhap/'+data[$i].MAPN+'">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td></tr>';
@@ -158,7 +158,7 @@
                 $value = convertStringToEnglish(this.value);
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllReceipt',
+                    url: '/TwelveShop/Admin/getAllReceipt',
                     success: function(data) {
                         var data = JSON.parse(data);
                         //console.log(data);
@@ -203,7 +203,7 @@
                                 '<th scope="col">' + formatter.format(data[$i].TONG) + '</th>' +
                                 '<td>' +
                                 '<button onclick="viewBillDetail(\''+data[$i].MAPN+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In phiếu nhập</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/XemChiTietPhieuNhap/1">' +
+                                '<a href="/TwelveShop/Admin/XemChiTietPhieuNhap/1">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td></tr>';
@@ -246,7 +246,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllReceipt',
+                url: '/TwelveShop/Admin/getAllReceipt',
                 success: function(data) {
                     var data = JSON.parse(data);
                     //console.log(data);
@@ -299,7 +299,7 @@
                             '<th scope="col">' + formatter.format(data[$i].TONG) + '</th>' +
                             '<td>' +
                             '<button class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In phiếu nhập</button>' +
-                            '<a href="/CuaHangNoiThat/Admin/XemChiTietPhieuNhap/1">' +
+                            '<a href="/TwelveShop/Admin/XemChiTietPhieuNhap/1">' +
                             '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                             '</a>' +
                             '</td></tr>';
@@ -316,7 +316,7 @@
         //Xem chi tiet Phieu Nhap
         function viewBillDetail($id) {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getReceiptAndDetail',
+                url: '/TwelveShop/Admin/getReceiptAndDetail',
                 data: {
                     'id': $id
                 },
@@ -421,7 +421,7 @@
         function exportExcel() {
             //<a href="">
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/exportReceiptToExcel',
+                url: '/TwelveShop/Admin/exportReceiptToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     if (data.ERROR == 0) {

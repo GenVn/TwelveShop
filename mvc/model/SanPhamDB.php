@@ -104,11 +104,11 @@ class SanPhamDB extends ConnectionDB
 
         foreach ($productArr as $value) {
             $currentProduct = $this->getProductById($value['MASP']);
-            if (-$value['amount']+$currentProduct['SOLUONG'] > 0) {
-                $qry .= "UPDATE `sanpham` SET `SOLUONG`=(-$value[amount]+$currentProduct[SOLUONG]) WHERE `MASP`='$value[MASP]';";
+            if (-$value['SOLUONG']+$currentProduct['SOLUONG'] > 0) {
+                $qry .= "UPDATE `sanpham` SET `SOLUONG`=(-$value[SOLUONG]+$currentProduct[SOLUONG]) WHERE `MASP`='$value[MASP]';";
             }
             else{
-                $qry .= "UPDATE `sanpham` SET `TRANGTHAI`=false,`SOLUONG`=(-$value[amount]+$currentProduct[SOLUONG]) WHERE `MASP`='$value[MASP]';";
+                $qry .= "UPDATE `sanpham` SET `TRANGTHAI`=false,`SOLUONG`=(-$value[SOLUONG]+$currentProduct[SOLUONG]) WHERE `MASP`='$value[MASP]';";
             }
         }
         if (mysqli_multi_query($this->conn, $qry)) {
@@ -197,7 +197,7 @@ class SanPhamDB extends ConnectionDB
             $objWriter = new Xlsx($objPHPExcel);
             $filename = 'Product' . date("dmY_His") . '.xlsx';
             $objWriter->save('./public/excel/' . $filename);
-            $result['NAME'] = '/CuaHangNoiThat/public/excel/' . $filename;
+            $result['NAME'] = './public/excel/' . $filename;
         } catch (Exception $e) {
             $result['ERROR'] = $e->getMessage();
         }

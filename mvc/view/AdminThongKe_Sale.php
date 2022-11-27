@@ -19,7 +19,7 @@
 
 <body>
     <div>
-        <button class="btn btn-warning" onclick="window.location.href='/CuaHangNoiThat/Admin/ThongKe'">Trở về</button>
+        <button class="btn btn-warning" onclick="window.location.href='/TwelveShop/Admin/ThongKe'">Trở về</button>
         <button class="btn btn-primary" onclick="printToImage('#statisticExport','ThongKeBanHang_<?php echo $data['time'];?>');">Xuất Hình Ảnh</button>
     </div>
     <div style="width: 900px;" id="statisticExport">
@@ -137,7 +137,7 @@
                                     '<td>'.getNameTypeProduct($data['type_product'],$product['MALOAI'])['TENLOAI'].'</td>'.
                                     '<td>'.$product['GIA'].'</td>'.
                                     '<td>'.
-                                    '<img src="/CuaHangNoiThat/public/image/HINHANH/'.$product['HINHANH'].'" alt="No Image" style="width: 5rem;">'.
+                                    '<img src="/TwelveShop/public/image/HINHANH/'.$product['HINHANH'].'" alt="No Image" style="width: 5rem;">'.
                                     '</td>'.
                                     '<td>'.$count_product_list[$product['MASP']].'</td>'.
                                     '</tr>';
@@ -170,7 +170,7 @@
                                     '<td>'.getNameTypeProduct($data['type_product'],$product['MALOAI'])['TENLOAI'].'</td>'.
                                     '<td>'.$product['GIA'].'</td>'.
                                     '<td>'.
-                                    '<img src="/CuaHangNoiThat/public/image/HINHANH/'.$product['HINHANH'].'" alt="No Image" style="width: 5rem;">'.
+                                    '<img src="/TwelveShop/public/image/HINHANH/'.$product['HINHANH'].'" alt="No Image" style="width: 5rem;">'.
                                     '</td>'.
                                     '<td>'.$count_product_list[$product['MASP']].'</td>'.
                                     '</tr>';

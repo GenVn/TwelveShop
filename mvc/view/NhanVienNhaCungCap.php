@@ -24,7 +24,7 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/NhanVien/ThemNhaCungCap"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm Nhà Cung Cấp</button></a>
+        <a href="/TwelveShop/NhanVien/ThemNhaCungCap"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm Nhà Cung Cấp</button></a>
         <button onclick="exportExcel();" type="button" class="btn btn-primary btn-lg optionButton">Xuất Excel</button>
     </div>
     <!-- Table -->
@@ -38,7 +38,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllSupplier',
+                url: '/TwelveShop/Admin/getAllSupplier',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -63,7 +63,7 @@
                             '<td>' + (data[$i].TRANGTHAI == 1 ? 'Còn hoạt động' : 'Không hoạt động') + '</td>' +
                             '<td>' +
                             '<button onclick="block_unblock(\''+data[$i].MANCC+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Mở/Khóa Nhà Cung Cấp</button>' +
-                            '<a href="/CuaHangNoiThat/NhanVien/SuaNhaCungCap/'+data[$i].MANCC+'">' +
+                            '<a href="/TwelveShop/NhanVien/SuaNhaCungCap/'+data[$i].MANCC+'">' +
                             '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Nhà Cung Cấp</button>' +
                             '</a>' +
                             '</td>' +
@@ -80,7 +80,7 @@
             $("#searchSupplier").keyup(function() {
                 var keySearch = convertStringToEnglish($("#searchSupplier").val());
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllSupplier',
+                    url: '/TwelveShop/Admin/getAllSupplier',
                     success: function(data) {
                         var data = JSON.parse(data);
                         $xhtml = '<thead>' +
@@ -127,7 +127,7 @@
                                 '<td>' + (data[$i].TRANGTHAI == 1 ? 'Còn hoạt động' : 'Không hoạt động') + '</td>' +
                                 '<td>' +
                                 '<button onclick="block_unblock(\''+data[$i].MANCC+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Mở/Khóa Nhà Cung Cấp</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/SuaNhaCungCap/'+data[$i].MANCC+'">' +
+                                '<a href="/TwelveShop/Admin/SuaNhaCungCap/'+data[$i].MANCC+'">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Nhà Cung Cấp</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -145,7 +145,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/block_unblockSupplier/' + idSupplier,
+                url: '/TwelveShop/Admin/block_unblockSupplier/' + idSupplier,
                 success: function(data){
                     
                     if(data == 0){
@@ -164,7 +164,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/exportSupplierToExcel',
+                url: '/TwelveShop/Admin/exportSupplierToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     if (data.ERROR == 0) {

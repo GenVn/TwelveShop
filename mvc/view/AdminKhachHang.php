@@ -99,7 +99,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllCustomer',
+                url: '/TwelveShop/Admin/getAllCustomer',
                 success: function(data) {
                     var data = JSON.parse(data);
 
@@ -145,7 +145,7 @@
 
         function block_unblock_Customer(id) {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/block_unblockCutomer/' + id,
+                url: '/TwelveShop/Admin/block_unblockCutomer/' + id,
                 success: function(data) {
                     console.log(data);
                     if (data == 0) {
@@ -163,7 +163,7 @@
                 $searchValue = convertStringToEnglish($("#searchValue").val());
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllCustomer',
+                    url: '/TwelveShop/Admin/getAllCustomer',
                     success: function(data) {
                         var data = JSON.parse(data);
                         $xhtml = '<thead>' +
@@ -274,7 +274,7 @@
             console.log("");
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllCustomer',
+                url: '/TwelveShop/Admin/getAllCustomer',
                 success: function(data) {
                     var data = JSON.parse(data);
                     //console.log(data);
@@ -345,7 +345,7 @@
 
         function exportExcel(){
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/exportCustomerToExcel',
+                url: '/TwelveShop/Admin/exportCustomerToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     if (data.ERROR == 0) {

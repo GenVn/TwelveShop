@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/CuaHangNoiThat/my-css.css">
-    <script src="/CuaHangNoiThat/processFunc.js"></script>
+    <link rel="stylesheet" href="/TwelveShop/my-css.css">
+    <script src="/TwelveShop/processFunc.js"></script>
     <title>BaLo</title>
 </head>
 
@@ -30,8 +30,8 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">
         <div class="container-fluid">
-            <a class="navar-branch" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">
-                <img src="/CuaHangNoiThat/public/image/logo.png" alt="logo" height="60px">
+            <a class="navar-branch" style="cursor: pointer;" href="/TwelveShop/TrangChu">
+                <img src="/TwelveShop/public/image/logo.png" alt="logo" height="60px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -39,16 +39,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto " id="lsp">
                     <li class="nav-item active">
-                        <a class="nav-link a active" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">TRANG CHỦ</a>
+                        <a class="nav-link a active" style="cursor: pointer;" href="/TwelveShop/TrangChu">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/AoQuan">ÁO & QUẦN</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/AoQuan">ÁO & QUẦN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/Balo">BALO</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -62,18 +62,18 @@
                     <div class="dropdown-content user" style="margin-top: -0.5rem;">
                         <?php
                         if (!isset($_SESSION['account'])) {
-                            echo '<a href="/CuaHangNoiThat/DangNhap">Đăng nhập</a>';
-                            echo '<a href="/CuaHangNoiThat/DangKy">Đăng ký</a>';
+                            echo '<a href="/TwelveShop/DangNhap">Đăng nhập</a>';
+                            echo '<a href="/TwelveShop/DangKy">Đăng ký</a>';
                         } else {
-                            echo '<a href="/CuaHangNoiThat/ThayDoiThongTin">Thay đổi thông tin</a>
-                                <a href="/CuaHangNoiThat/DoiMatKhau">Đổi mật khẩu</a>
-                                <a href="/CuaHangNoiThat/LichSuGioHang">Lịch sử</a>
-                                <a href="/CuaHangNoiThat/TrangChu/Logout">Đăng xuất</a>';
+                            echo '<a href="/TwelveShop/ThayDoiThongTin">Thay đổi thông tin</a>
+                                <a href="/TwelveShop/DoiMatKhau">Đổi mật khẩu</a>
+                                <a href="/TwelveShop/LichSuGioHang">Lịch sử</a>
+                                <a href="/TwelveShop/TrangChu/Logout">Đăng xuất</a>';
                         }
                         ?>
                     </div>
                 </div>
-                <a href="/CuaHangNoiThat/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
+                <a href="/TwelveShop/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
                 <span id="counter">
                     <?php
                     if (isset($_SESSION['cart'])) {
@@ -91,7 +91,7 @@
         </div>
     </nav>
     <div class="banner">
-        <img src="/CuaHangNoiThat/public/image/BANNER_BALO.jpg" alt="">
+        <img src="/TwelveShop/public/image/BANNER_BALO.jpg" alt="">
     </div>
     <h2 class="title">
         <span>BALO</span>
@@ -155,7 +155,7 @@
     </div>
     <div class="footer-container">
         <div class="footer">
-            <img src="/CuaHangNoiThat/public/image/logo.png" alt="">
+            <img src="/TwelveShop/public/image/logo.png" alt="">
         </div>
         <div class="footer">
             <a href="">GIAO HÀNG</a><br>
@@ -179,15 +179,15 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllProductByType/LSP04',
+                url: '/TwelveShop/Admin/getAllProductByType/LSP04',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '';
                     for (var key in data) {
                         $obj = data[key];
                         $xhtml += ' <div class="product-item">' +
-                            '<a href="/CuaHangNoiThat/ChiTietSanPham/SanPham/' + $obj.MASP + '">' +
-                            '<div><img src="/CuaHangNoiThat/public/image/HINHANH/' + $obj.HINHANH + '" alt="" class="scale-image"></div>' +
+                            '<a href="/TwelveShop/ChiTietSanPham/SanPham/' + $obj.MASP + '">' +
+                            '<div><img src="/TwelveShop/public/image/HINHANH/' + $obj.HINHANH + '" alt="" class="scale-image"></div>' +
                             '<p class="product-name">' + $obj.TENSP + '<sup style="color: red;font-size: 1.2rem;"> -' + $obj.PHANTRAMGIAM + '%</sup></p>' +
                             '</a>' +
                             '<div style="font-size: 20px;">Giá gốc: <div class="price">' + formatter.format($obj.GIA) + ' <sup>đ</sup></div></div>';
@@ -241,7 +241,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllProductByType/LSP04',
+                url: '/TwelveShop/Admin/getAllProductByType/LSP04',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '';
@@ -294,8 +294,8 @@
                         }
 
                         $xhtml += ' <div class="product-item">' +
-                            '<a href="/CuaHangNoiThat/ChiTietSanPham/SanPham/' + $obj.MASP + '">' +
-                            '<div><img src="/CuaHangNoiThat/public/image/HINHANH/' + $obj.HINHANH + '" alt="" class="scale-image"></div>' +
+                            '<a href="/TwelveShop/ChiTietSanPham/SanPham/' + $obj.MASP + '">' +
+                            '<div><img src="/TwelveShop/public/image/HINHANH/' + $obj.HINHANH + '" alt="" class="scale-image"></div>' +
                             '<p class="product-name">' + $obj.TENSP + '<sup style="color: red;font-size: 1.2rem;"> -' + $obj.PHANTRAMGIAM + '%</sup></p>' +
                             '</a>' +
                             '<div style="font-size: 20px;">Giá gốc: <div class="price">' + formatter.format($obj.GIA) + ' <sup>đ</sup></div></div>';
@@ -318,7 +318,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/addToCart/' + $productId,
+                url: '/TwelveShop/Admin/addToCart/' + $productId,
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);
@@ -329,7 +329,7 @@
 
         function loadCountCart() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/countCart',
+                url: '/TwelveShop/Admin/countCart',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $("#counter").html(data.COUNT)

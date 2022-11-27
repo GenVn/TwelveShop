@@ -2,7 +2,7 @@
     class ThayDoiThongTin extends Controller{
         function display(){
             if(!isset($_SESSION['account'])){
-                echo '<script>alert("Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục");window.location.href="./DangNhap";</script>';
+                echo '<script>alert("Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục");window.location.href="/TwelveShop/DangNhap";</script>';
                 return;
             }
             

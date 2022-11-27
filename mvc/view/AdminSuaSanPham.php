@@ -53,7 +53,7 @@ if ($id == '' || empty($productList)) {
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1" style="float: left;">Hình Ảnh hiện tại</label>
-      <img id="currentImageProduct" src="/CuaHangNoiThat/public/image/HINHANH/<?php echo $product['HINHANH']; ?>" alt="error" style="width: 40%;float: right;">
+      <img id="currentImageProduct" src="/TwelveShop/public/image/HINHANH/<?php echo $product['HINHANH']; ?>" alt="error" style="width: 40%;float: right;">
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1" style="width: 100%;">Thay đổi Hình Ảnh</label>
@@ -63,7 +63,7 @@ if ($id == '' || empty($productList)) {
       <label for="exampleInputEmail1" style="width: 100%;">Phần Trăm Giảm (%)</label>
       <input type="text" class="form-control-file" value="<?php echo $product['PHANTRAMGIAM']; ?>" id="decreaseProduct">
     </div>
-    <a href="/CuaHangNoiThat/Admin/SanPham">
+    <a href="/TwelveShop/Admin/SanPham">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="editProduct();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Sửa Sản Phẩm</button>
@@ -84,7 +84,7 @@ if ($id == '' || empty($productList)) {
         form_data.append('file', file_data);
 
         $.ajax({
-          url: '/CuaHangNoiThat/Admin/uploadImage',
+          url: '/TwelveShop/Admin/uploadImage',
           dataType: 'text', // what to expect back from the server
           cache: false,
           contentType: false,
@@ -104,7 +104,7 @@ if ($id == '' || empty($productList)) {
             currentImage = currentImage.substring($index + 1);
             if (data[0] == 0) {
               alert("Thêm ảnh thành công");
-              $("#currentImageProduct").attr('src','/CuaHangNoiThat/public/image/HINHANH/'+data[1]+currentImage);
+              $("#currentImageProduct").attr('src','/TwelveShop/public/image/HINHANH/'+data[1]+currentImage);
               return;
             }
             alert('Không thể upload ảnh');
@@ -147,7 +147,7 @@ if ($id == '' || empty($productList)) {
     };
 
       $.ajax({
-        url : '/CuaHangNoiThat/Admin/updateInformationProduct',
+        url : '/TwelveShop/Admin/updateInformationProduct',
         data : {obj:$obj},
         method:'post',
         success : function(result){

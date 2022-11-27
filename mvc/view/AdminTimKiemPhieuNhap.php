@@ -87,7 +87,7 @@
                 <input type="text" class="form-control" id="inputAddress">
             </div>
         </div>
-        <a href="/CuaHangNoiThat/Admin/PhieuNhap">
+        <a href="/TwelveShop/Admin/PhieuNhap">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #007bff;">Trở về </button>
         </a>
         <button type="submit" class="btn btn-primary">Tìm kiếm </button>
@@ -118,7 +118,7 @@
                 <td></td>
                 <td>
                     <button class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In phiếu nhập</button>
-                    <a href="/CuaHangNoiThat/Admin/XemChiTietPhieuNhap/1">
+                    <a href="/TwelveShop/Admin/XemChiTietPhieuNhap/1">
                         <button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>
                     </a>
                 </td>

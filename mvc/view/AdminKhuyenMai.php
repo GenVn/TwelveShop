@@ -24,7 +24,7 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/Admin/ThemKhuyenMai"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm khuyến mãi</button></a>
+        <a href="/TwelveShop/Admin/ThemKhuyenMai"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm khuyến mãi</button></a>
         <div class="form-group" style="width: 50%;float: right;margin-left: 2rem;">
             <input type="text" class="form-control" id="searchValue" placeholder="Nhập thông tin khuyến mãi..." style="float: right;width: 20rem;">
         </div>
@@ -37,7 +37,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllSale',
+                url: '/TwelveShop/Admin/getAllSale',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -97,7 +97,7 @@
                 $searchValue = convertStringToEnglish($("#searchValue").val());
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllSale',
+                    url: '/TwelveShop/Admin/getAllSale',
                     success: function(data) {
                         var data = JSON.parse(data);
                         $xhtml = '<thead>' +
@@ -134,7 +134,7 @@
                                 '<td>' + formatDateToddmmyyyy(data[$i].NGAYKT) + '</td>' +
                                 '<td>' + data[$i].PHANTRAMGIAM + '%</td>' +
                                 '<td>' +
-                                '<a href="/CuaHangNoiThat/Admin/SuaKhuyenMai/' + data[$i].MAKM + '">' +
+                                '<a href="/TwelveShop/Admin/SuaKhuyenMai/' + data[$i].MAKM + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa khuyến mãi</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -153,7 +153,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/disabledSale/' + $id,
+                url: '/TwelveShop/Admin/disabledSale/' + $id,
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);

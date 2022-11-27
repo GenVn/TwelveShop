@@ -78,7 +78,7 @@
         function loadTable() {
             $(document).ready(function() {
                 $.ajax({
-                    url: "/CuaHangNoiThat/NhanVien/getAllBillAndReceiptWithDetail",
+                    url: "/TwelveShop/NhanVien/getAllBillAndReceiptWithDetail",
                     success: function(data) {
                         var data = JSON.parse(data);
                         var dataBill = data.BILL;
@@ -111,7 +111,7 @@
                                 '<td>' + dataBill[i]['ex_staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -128,7 +128,7 @@
                                 '<td>' + dataReceipt[i]['staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -174,7 +174,7 @@
             }
 
             $.ajax({
-                url: "/CuaHangNoiThat/NhanVien/getAllBillAndReceiptWithDetail",
+                url: "/TwelveShop/NhanVien/getAllBillAndReceiptWithDetail",
                 success: function(data) {
                     var data = JSON.parse(data);
                     var dataBill = data.BILL;
@@ -227,7 +227,7 @@
                                 '<td>' + dataBill[i]['ex_staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -265,7 +265,7 @@
                                 '<td>' + dataReceipt[i]['staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -305,7 +305,7 @@
                                 '<td>' + dataBill[i]['ex_staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemChiTietPX/' + dataBill[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -342,7 +342,7 @@
                                 '<td>' + dataReceipt[i]['staff']['TENNV'] + '</td>' +
                                 '<td>';
 
-                            xhtml += '<a href="/CuaHangNoiThat/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
+                            xhtml += '<a href="/TwelveShop/NhanVien/XemCHiTietPhieuNhap/' + dataReceipt[i].MAPN + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -372,9 +372,9 @@
                 alert('Ngày bắt đầu phải nhỏ hơn ngày kết thúc');
                 return;
             }
-            ///CuaHangNoiThat/NhanVien/getAllBillAndReceiptWithDetail
+            ///TwelveShop/NhanVien/getAllBillAndReceiptWithDetail
             $.ajax({
-                url: '/CuaHangNoiThat/NhanVien/getAllBillAndReceiptWithDetail',
+                url: '/TwelveShop/NhanVien/getAllBillAndReceiptWithDetail',
                 success: function(data) {
                     var data = JSON.parse(data);
                     var dataBill = data.BILL;
@@ -389,7 +389,7 @@
                             countIn++;
                             xhtmlIm += '<div class="card" style="width: 25rem;margin: 1rem;float: '+(dataBill.at(-1) === data ? "none":"left")+';border-radius: 1rem;">' +
                                 '<div style="text-align: center;">' +
-                                '<img class="card-img-top" src="/CuaHangNoiThat/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' +
+                                '<img class="card-img-top" src="/TwelveShop/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' +
                                 '</div>' +
                                 '<div class="card-body">' +
                                 '<table>' +
@@ -406,7 +406,7 @@
                                 '<td>' + formatter.format(data['TONG']) + ' VNĐ</td>' +
                                 '</tr>' +
                                 '</table>' +
-                                '<a href="/CuaHangNoiThat/NhanVien/XemCHiTietPhieuNhap/' + data['MAPN'] + '" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' +
+                                '<a href="/TwelveShop/NhanVien/XemCHiTietPhieuNhap/' + data['MAPN'] + '" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' +
                                 '</div>' +
                                 '</div>';
                         }
@@ -417,7 +417,7 @@
                             countOut++;
                             xhtmlEx += '<div class="card" style="width: 25rem;margin: 1rem;float: '+(dataBill.at(-1) === data ? "none":"left")+';border-radius: 1rem;">' +
                                 '<div style="text-align: center;">' +
-                                '<img class="card-img-top" src="/CuaHangNoiThat/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' +
+                                '<img class="card-img-top" src="/TwelveShop/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' +
                                 '</div>' +
                                 '<div class="card-body">' +
                                 '<table>' +
@@ -434,7 +434,7 @@
                                 '<td>' + formatter.format(data['TONG']) + ' VNĐ</td>' +
                                 '</tr>' +
                                 '</table>' +
-                                '<a href="/CuaHangNoiThat/NhanVien/XemChiTietHD_STA/' + data['MAHD'] + '" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' +
+                                '<a href="/TwelveShop/NhanVien/XemChiTietHD_STA/' + data['MAHD'] + '" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' +
                                 '</div>' +
                                 '</div>';
 

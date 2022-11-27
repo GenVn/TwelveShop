@@ -57,7 +57,7 @@
             <input type="text" class="form-control" id="passwordStaff" value="">
         </div>
 
-        <a href="/CuaHangNoiThat/Admin/NhanVien">
+        <a href="/TwelveShop/Admin/NhanVien">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
         </a>
         <button onclick="editStaff();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Sửa Nhân Viên</button>
@@ -111,7 +111,7 @@
             }
 
             $.ajax({
-                url:'/CuaHangNoiThat/Admin/updateInfoStaff',
+                url:'/TwelveShop/Admin/updateInfoStaff',
                 method:'post',
                 data:{data:$obj},
                 success: function(data){

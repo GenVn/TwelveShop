@@ -24,7 +24,7 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div style="width: 80%;margin-left: 10%;">
-        <a href="/CuaHangNoiThat/Admin/ThemNhanVien"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm Nhân Viên</button></a>
+        <a href="/TwelveShop/Admin/ThemNhanVien"><button type="button" class="btn btn-primary btn-lg optionButton">Thêm Nhân Viên</button></a>
         <button onclick="exportExcel();" type="button" class="btn btn-primary btn-lg optionButton">Xuất Excel</button>
         <div class="form-group" style="width: 50%;float: right;margin-left: 2rem;">
             <input type="text" class="form-control" id="searchValue" placeholder="Nhập vào tên nhân viên..." style="float: right;width: 20rem;">
@@ -144,7 +144,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllStaff',
+                url: '/TwelveShop/Admin/getAllStaff',
                 success: function(data) {
                     var data = JSON.parse(data);
                     // console.log(data);
@@ -178,11 +178,11 @@
                         $rightStaff = data[$i].MAQUYEN;
                         if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'1')) {
                             $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
+                                '<a href="/TwelveShop/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Thông Tin</button></a>';
 
 
-                            $xhtml += '<a href="/CuaHangNoiThat/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
+                            $xhtml += '<a href="/TwelveShop/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
 
 
                         }
@@ -200,7 +200,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/updateStatusStaff',
+                url: '/TwelveShop/Admin/updateStatusStaff',
                 method: 'post',
                 data: {
                     data: $id
@@ -217,7 +217,7 @@
                 $searchValue = convertStringToEnglish($("#searchValue").val());
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/getAllStaff',
+                    url: '/TwelveShop/Admin/getAllStaff',
                     success: function(data) {
                         var data = JSON.parse(data);
                         $xhtml = '<thead>' +
@@ -280,11 +280,11 @@
                             $rightStaff = data[$i].MAQUYEN;
                             if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'e_right')) {
                                 $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
-                                    '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
+                                    '<a href="/TwelveShop/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
                                     '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Thông Tin</button></a>';
 
 
-                                $xhtml += '<a href="/CuaHangNoiThat/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
+                                $xhtml += '<a href="/TwelveShop/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
                             }
 
                             $xhtml += '</td></tr>';
@@ -356,7 +356,7 @@
             // console.log("");
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllStaff',
+                url: '/TwelveShop/Admin/getAllStaff',
                 success: function(data) {
                     var data = JSON.parse(data);
                     //console.log(data);
@@ -425,11 +425,11 @@
                         $rightStaff = data[$i].MAQUYEN;
                         if (data[$i].TRANGTHAI == 1 && data[$i].STAFF_LOGIN != data[$i].MANV && !isExistValueInString($rightStaff,'e_right')) {
                             $xhtml += '<button onclick="blockStaff(\'' + data[$i].MANV + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;">Khóa Nhân Viên</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
+                                '<a href="/TwelveShop/Admin/SuaNhanVien/' + data[$i].MANV + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Sửa Thông Tin</button></a>';
 
 
-                            $xhtml += '<a href="/CuaHangNoiThat/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
+                            $xhtml += '<a href="/TwelveShop/Admin/PhanQuyen/' + data[$i].MANV + '"><button class="btn btn-primary btnControl" type="submit" style="background-color: #f09605;margin-top: 0.3rem;">Sửa Phân Quyền</button></a>';
 
 
                         }
@@ -446,7 +446,7 @@
 
         function exportExcel() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/exportStaffToExcel',
+                url: '/TwelveShop/Admin/exportStaffToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     if (data.ERROR == 0) {

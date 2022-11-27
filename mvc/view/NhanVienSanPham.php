@@ -119,7 +119,7 @@
 
         function sortData($param,$type){
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllProduct',
+                url: '/TwelveShop/Admin/getAllProduct',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -168,11 +168,11 @@
                             '<td>' + $obj.MALOAI + '</td>' +
                             '<td>' + formatter.format($obj.GIA) + '</td>' +
                             '<td>' + $obj.SOLUONG + '</td>' +
-                            '<td><img src="../public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
+                            '<td><img src="/TwelveShop/public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
                             '<td>' + ($obj.TRANGTHAI == 1 ? 'Còn  CửaTrong Hàng' : 'Đã Xóa') + '</td>' +
                             '<td>' + $obj.PHANTRAMGIAM + '%</td>';
                         if ($obj.TRANGTHAI == 1) {
-                            $xhtml += '<td><a href="/CuaHangNoiThat/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
+                            $xhtml += '<td><a href="/TwelveShop/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
                         }
                         $xhtml += '</tr>';
                     }
@@ -185,7 +185,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllProduct',
+                url: '/TwelveShop/Admin/getAllProduct',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<thead>' +
@@ -213,11 +213,11 @@
                             '<td>' + $obj.MALOAI + '</td>' +
                             '<td>' + formatter.format($obj.GIA) + '</td>' +
                             '<td>' + $obj.SOLUONG + '</td>' +
-                            '<td><img src="../public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
+                            '<td><img src="/TwelveShop/public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
                             '<td>' + ($obj.TRANGTHAI == 1 ? 'Còn  CửaTrong Hàng' : 'Đã Xóa') + '</td>' +
                             '<td>' + $obj.PHANTRAMGIAM + '%</td>';
                         if ($obj.TRANGTHAI == 1) {
-                            $xhtml += '<td><a href="/CuaHangNoiThat/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
+                            $xhtml += '<td><a href="/TwelveShop/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
                         }
                         $xhtml += '</tr>';
                     }
@@ -267,7 +267,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getAllProduct',
+                url: '/TwelveShop/Admin/getAllProduct',
                 success: function(data) {
                     var data = JSON.parse(data);
 
@@ -319,11 +319,11 @@
                             '<td>' + $obj.MALOAI + '</td>' +
                             '<td>' + formatter.format($obj.GIA) + '</td>' +
                             '<td>' + $obj.SOLUONG + '</td>' +
-                            '<td><img src="../public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
+                            '<td><img src="/TwelveShop/public/image/HINHANH/' + $obj.HINHANH + '" alt="empty_Image" style="width: 10rem;height:8rem;"></td>' +
                             '<td>' + ($obj.TRANGTHAI == 1 ? 'Còn Trong Cửa Hàng' : 'Đã Xóa') + '</td>' +
                             '<td>' + $obj.PHANTRAMGIAM + '%</td>';
                         if ($obj.TRANGTHAI == 1) {
-                            $xhtml += '<td><a href="/CuaHangNoiThat/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
+                            $xhtml += '<td><a href="/TwelveShop/NhanVien/SuaSanPham/'+$obj.MASP+'"><button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button></a><button onclick="deleteElement(\''+$obj.MASP+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;margin-top: 1rem;">Xóa Sản phẩm</button></td>';
                         }
                         $xhtml += '</tr>';
                     }
@@ -343,7 +343,7 @@
             }
 
             $.ajax({
-                url:'/CuaHangNoiThat/Admin/disableProductStatus',
+                url:'/TwelveShop/Admin/disableProductStatus',
                 data :{id:$idProduct},
                 method:'post',
                 success : function(result){
@@ -365,7 +365,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/exportProductToExcel',
+                url: '/TwelveShop/Admin/exportProductToExcel',
                 success: function(data) {
                     var data = JSON.parse(data);
                     console.log(data);
@@ -392,7 +392,7 @@
             if(!checkRight('request_add_product')){
                 return;
             }
-            window.location.href="/CuaHangNoiThat/NhanVien/BaoCaoYeuCauThemSanPham"
+            window.location.href="/TwelveShop/NhanVien/BaoCaoYeuCauThemSanPham"
         }
     </script>
 

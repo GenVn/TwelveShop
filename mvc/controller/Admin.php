@@ -94,7 +94,7 @@ class Admin extends Controller
         $data = array();
         $data['bill'] = $objBill->getBillById($id)[0];
         $data['bill']['TENNV'] = $objStaff->getStaffById($data['bill']['MANV'])['TENNV'];
-        $data['bill']['TENNV_XUAT'] = $objStaff->getStaffById($data['bill']['MANV_XUAT'])['TENNV'];
+        $data['bill']['TENNV_XUAT'] = $objStaff->getStaffById($data['bill']['MANV'])['TENNV'];
         $data['bill']['TENKH'] = $objCustomer->getCutomerById($data['bill']['MAKH'])['TENKH'];
         $data['bill']['SALE'] = $objSale->getSaleById($data['bill']['MAKM']);
         $data['detail'] = $objBill->getBillDetailById($id);
@@ -138,7 +138,7 @@ class Admin extends Controller
     {
 
         if (!isset($_POST['id'])) {
-            echo -1;
+            echo -2;
             return;
         }
         $id = $_POST['id'];
@@ -150,7 +150,7 @@ class Admin extends Controller
             if($status == 'TT02'){
                 $billDetail = $objBill->getBillDetailById($id);
                 foreach($billDetail as $key=>$value){
-                    $billDetail[$key]['amount'] = $value['SOLUONG'];
+                    $billDetail[$key]['SOLUONG'] = $value['SOLUONG'];
                     if($objProduct->updateNumberListProduct($billDetail)){
                         echo 0;
                     }
@@ -249,7 +249,7 @@ class Admin extends Controller
     function block_unblockCutomer($id)
     {
         if (!isset($_SESSION['staff']) ) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/";</script>';
             return;
         }
         $objCus = $this->getModel('KhachHangDB');
@@ -323,7 +323,7 @@ class Admin extends Controller
     function ThemKhuyenMai()
     {
         if (!isset($_SESSION['staff']) ) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./KhuyenMai";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/KhuyenMai";</script>';
             return;
         }
         require_once('./menuadmin.php');
@@ -397,7 +397,7 @@ class Admin extends Controller
     function ThemLoaiSanPham()
     {
         if (!isset($_SESSION['staff']) ) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./LoaiSanPham";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/LoaiSanPham";</script>';
             return;
         }
         require_once('./menuadmin.php');
@@ -485,7 +485,7 @@ class Admin extends Controller
     function NhaCungCap()
     {
         if (!isset($_SESSION['staff'])) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/";</script>';
             return;
         }
         require_once('./menuadmin.php');
@@ -579,7 +579,7 @@ class Admin extends Controller
     function NhanVien()
     {
         /*if (!isset($_SESSION['staff']) ) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/";</script>';
             return;
         }
         $obj = $this->getModel('QuyenDB');
@@ -742,7 +742,7 @@ class Admin extends Controller
     function PhieuNhap()
     {
         if (!isset($_SESSION['staff'])) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="./";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/";</script>';
             return;
         }
         require_once('./menuadmin.php');
@@ -1266,9 +1266,9 @@ class Admin extends Controller
             }
             $_SESSION['cart'] = $cart;
             if ($valid) {
-                $result['URL'] = '/CuaHangNoiThat/GioHang/ThanhToan';
+                $result['URL'] = './GioHang/ThanhToan';
             } else {
-                $result['URL'] = '/CuaHangNoiThat/GioHang/';
+                $result['URL'] = './GioHang/';
             }
         }
         echo json_encode($result);
@@ -1313,9 +1313,9 @@ class Admin extends Controller
                 $sum += $value['GIA'] * $value['amount'];
             }
             //Tao hoa don
-            $billQry = "INSERT INTO `hoadon`(`MAHD`,`MANV`, `MAKH`, `NGAYLAP`, `GIOLAP`, `TONG`, `MATRANGTHAI`, `MAKM`,`PAYPAL`) VALUES ('$billId',NULL,'$cusId','$day','$time',$sum,'TT01','$saleId',$pay);";
+            $billQry = "INSERT INTO `hoadon`(`MAHD`,`MANV`, `MAKH`, `NGAYLAP`, `GIOLAP`, `TONG`, `MATRANGTHAI`, `MAKM`,`PAYPAL`) VALUES ('$billId','NV00','$cusId','$day','$time',$sum,'TT01','$saleId',$pay);";
 
-            echo $billQry;
+            // echo $billQry;
 
             //Tao chi tiet hoa don
             $detailQry = "INSERT INTO `ct_hoadon`(`MAHD`, `MASP`, `SOLUONG`, `GIA`, `PHANTRAMGIAM`) VALUES";
@@ -1421,7 +1421,7 @@ class Admin extends Controller
         if (isset($_SESSION['staff'])) {
             unset($_SESSION['staff']);
         }
-        echo '<script>window.location.href="./";</script>';
+        echo '<script>window.location.href="/TwelveShop/";</script>';
     }
 
     function checkLoginAdmin($user, $pass)

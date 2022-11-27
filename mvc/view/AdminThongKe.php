@@ -99,7 +99,7 @@
             } 
 
 
-            window.location.href = "/CuaHangNoiThat/Admin/ThongKeTheoTG/"+$monthFrom + '/' + $monthTo;
+            window.location.href = "/TwelveShop/Admin/ThongKeTheoTG/"+$monthFrom + '/' + $monthTo;
 
         }
 
@@ -112,7 +112,7 @@
             }
 
            
-            window.location.href = "/CuaHangNoiThat/Admin/ThongKeBanHang/"+$monthFrom
+            window.location.href = "/TwelveShop/Admin/ThongKeBanHang/"+$monthFrom
         }
 
         function statisticWareHouse(){
@@ -124,7 +124,7 @@
             }
 
            
-            window.location.href = "/CuaHangNoiThat/Admin/ThongKeNhapHang/"+$monthFrom
+            window.location.href = "/TwelveShop/Admin/ThongKeNhapHang/"+$monthFrom
         }
     </script>
 </body>

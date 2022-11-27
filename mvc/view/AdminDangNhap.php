@@ -25,7 +25,7 @@
         <p style="font-size: 18px;text-align: left;color: red;margin-left: 20%;" id="errorPass">Mật khẩu không hợp lệ</p>
         <p id="errorMessage" style="margin-top: 0;padding-top: 0;"></p>
         <input type="submit" id="submitbtn" value="ĐĂNG NHẬP" class="btn-log">
-        <div class="reg">Bạn chưa có tài khoản? <a href="./DangKy">Đăng ký</a></div>
+        <div class="reg">Bạn chưa có tài khoản? <a href="/TwelveShop/DangKy">Đăng ký</a></div>
     </fieldset>
 
 </body>
@@ -53,7 +53,7 @@
         }
 
         $.ajax({
-            url: '/CuaHangNoiThat/Admin/checkLoginAdmin/' + $uname + '/' + $pass,
+            url: '/TwelveShop/Admin/checkLoginAdmin/' + $uname + '/' + $pass,
             method: 'POST',
             data: {
                 url: window.location.href
@@ -75,7 +75,7 @@
                     $("#errorMessage").html("Tài khoản của bạn không phải là admin");
                     $("#errorMessage").show();
                     $.ajax({
-                        url: '/CuaHangNoiThat/Admin/DangXuat'
+                        url: '/TwelveShop/Admin/DangXuat'
                     })
                 }
                 window.location.href = '../Admin'

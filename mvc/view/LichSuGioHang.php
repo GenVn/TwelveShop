@@ -18,8 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/CuaHangNoiThat/my-css.css">
-    <script src="/CuaHangNoiThat/processFunc.js"></script>
+    <link rel="stylesheet" href="/TwelveShop/my-css.css">
+    <script src="/TwelveShop/processFunc.js"></script>
 
     <title>Lịch sử mua hàng</title>
 </head>
@@ -32,9 +32,9 @@
         </div>
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">
-        <div class="container-fluid">
-            <a class="navar-branch" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">
-                <img src="/CuaHangNoiThat/public/image/logo.png" alt="logo" height="60px">
+    <div class="container-fluid">
+            <a class="navar-branch" style="cursor: pointer;" href="/TwelveShop/TrangChu">
+                <img src="/TwelveShop/public/image/logo.png" alt="logo" height="60px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -42,22 +42,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto " id="lsp">
                     <li class="nav-item active">
-                        <a class="nav-link a active" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">TRANG CHỦ</a>
+                        <a class="nav-link a active" style="cursor: pointer;" href="/TwelveShop/TrangChu.php">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/TrangTri">TRANG TRÍ</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/AoQuan">ÁO & QUẦN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongNgu">PHÒNG NGỦ</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongLamViec">PHÒNG LÀM VIỆC</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongKhach">PHÒNG KHÁCH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="/CuaHangNoiThat/PhongAn">PHÒNG ĂN</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -69,21 +63,20 @@
                 <div class="dropdown">
                     <i class="fa fa-user"></i><i class="fa fa-angle-down"></i>
                     <div class="dropdown-content user" style="margin-top: -0.5rem;">
-                        <?php 
-                            if (!isset($_SESSION['account'])) {
-                                echo '<a href="/CuaHangNoiThat/DangNhap">Đăng nhập</a>';
-                                echo '<a href="/CuaHangNoiThat/DangKy">Đăng ký</a>';
-                            }
-                            else{
-                                echo '<a href="/CuaHangNoiThat/ThayDoiThongTin">Thay đổi thông tin</a>
-                                <a href="/CuaHangNoiThat/DoiMatKhau">Đổi mật khẩu</a>
-                                <a href="/CuaHangNoiThat/LichSuGioHang">Lịch sử</a>
-                                <a href="/CuaHangNoiThat/TrangChu/Logout">Đăng xuất</a>';
-                            }
-                        ?>                        
+                        <?php
+                        if (!isset($_SESSION['account'])) {
+                            echo '<a href="/TwelveShop/DangNhap">Đăng nhập</a>';
+                            echo '<a href="/TwelveShop/DangKy">Đăng ký</a>';
+                        } else {
+                            echo '<a href="/TwelveShop/ThayDoiThongTin">Thay đổi thông tin</a>
+                                <a href="/TwelveShop/DoiMatKhau">Đổi mật khẩu</a>
+                                <a href="/TwelveShop/LichSuGioHang">Lịch sử</a>
+                                <a href="/TwelveShop/TrangChu/Logout">Đăng xuất</a>';
+                        }
+                        ?>
                     </div>
                 </div>
-                <a href="/CuaHangNoiThat/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
+                <a href="/TwelveShop/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
                 <span id="counter">
                     <?php
                     if (isset($_SESSION['cart'])) {
@@ -108,7 +101,7 @@
     </table>
     <div class="footer-container">
         <div class="footer">
-            <img src="/CuaHangNoiThat/public/image/logo.png" alt="">
+            <img src="/TwelveShop/public/image/logo.png" alt="">
         </div>
         <div class="footer">
             <a href="">GIAO HÀNG</a><br>
@@ -131,7 +124,7 @@
 
     <script>
         function viewDetail($id) {
-            window.location.href = "/CuaHangNoiThat/LichSuGioHang/XemChiTiet/" + $id;
+            window.location.href = "./LichSuGioHang/XemChiTiet/" + $id;
         }
 
         function submitBill($id) {
@@ -140,7 +133,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/submitBill/' + $id,
+                url: '/TwelveShop/Admin/submitBill/' + $id,
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);
@@ -156,7 +149,7 @@
             }
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/destroyBill/' + $id,
+                url: '/TwelveShop/Admin/destroyBill/' + $id,
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);
@@ -169,7 +162,7 @@
 
         function loadTable() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getCusBillAndDetailBill',
+                url: '/TwelveShop/Admin/getCusBillAndDetailBill',
                 success: function(data) {
                     var data = JSON.parse(data);
                     $xhtml = '<tr>' +

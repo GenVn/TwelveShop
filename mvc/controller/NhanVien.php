@@ -16,7 +16,7 @@ class NhanVien extends Controller
         if (isset($_SESSION['staff'])) {
             unset($_SESSION['staff']);
         }
-        echo '<script>window.location.href="/CuaHangNoiThat/NhanVien";</script>';
+        echo '<script>window.location.href="/TwelveShop/NhanVien";</script>';
     }
 
     function SanPham(){
@@ -31,13 +31,13 @@ class NhanVien extends Controller
     }
 
     function returnHome($url = ''){
-        echo '<script>alert("Bạn không có quyền sử dụng chức năng này !!!!");window.location.href = "/CuaHangNoiThat/NhanVien'.($url == '' ? '':'/'.$url).'";</script>';
+        echo '<script>alert("Bạn không có quyền sử dụng chức năng này !!!!");window.location.href = "./NhanVien'.($url == '' ? '':'/'.$url).'";</script>';
     }
 
     function SuaSanPham($id)
     {
         if (!isset($_SESSION['staff']) || strpos($_SESSION['staff']['QUYEN'],'e_product') === false) {
-            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/CuaHangNoiThat/NhanVien/SanPham";</script>';
+            echo '<script>alert("Bạn không có quyền thực hiên chức năng này !!!");window.location.href="/TwelveShop/NhanVien/SanPham";</script>';
         }
         $data = array();
         $objProduct = $this->getModel("SanPhamDB");
@@ -329,7 +329,7 @@ class NhanVien extends Controller
         
         foreach($data['BILL'] as $key=>$value){
             $data['BILL'][$key]['staff'] = $objStaff->getStaffById($value['MANV']);
-            $data['BILL'][$key]['ex_staff'] = $objStaff->getStaffById($value['MANV_XUAT']);
+            $data['BILL'][$key]['ex_staff'] = $objStaff->getStaffById($value['MANV']);
 
         }
         

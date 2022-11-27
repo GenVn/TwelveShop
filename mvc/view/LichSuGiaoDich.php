@@ -26,7 +26,7 @@
         <!-- item -->
         <!-- <div class="card" style="width: 25rem;margin: 1rem;float: left;border-radius: 1rem;">
             <div style="text-align: center;">
-                <img class="card-img-top" src="/CuaHangNoiThat/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">
+                <img class="card-img-top" src="/TwelveShop/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">
             </div>
 
             <div class="card-body">
@@ -48,7 +48,7 @@
                         <td>Có</td>
                     </tr>
                 </table>
-                <a href="/CuaHangNoiThat/NhanVien/XemChiTietHD_STA/HD01" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>
+                <a href="/TwelveShop/NhanVien/XemChiTietHD_STA/HD01" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>
             </div>
         </div> -->
 
@@ -56,7 +56,7 @@
         foreach ($data['bill'] as $value) {
             echo '<div class="card" style="width: 25rem;margin: 1rem;float: left;border-radius: 1rem;">' .
                 '<div style="text-align: center;">' .
-                '<img class="card-img-top" src="/CuaHangNoiThat/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' .
+                '<img class="card-img-top" src="/TwelveShop/public/image/bill_icon.jpg" alt="Card image cap" style="width: 10rem;">' .
                 '</div>' .
                 '<div class="card-body">' .
                 '<table>' .
@@ -77,7 +77,7 @@
                 '<td>'.($value['PAYPAL'] == 0 ? 'Không':'Có').'</td>' .
                 '</tr>' .
                 '</table>' .
-                '<a href="/CuaHangNoiThat/NhanVien/XemChiTietHD_STA/'.$value['MAHD'].'" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' .
+                '<a href="/TwelveShop/NhanVien/XemChiTietHD_STA/'.$value['MAHD'].'" class="btn btn-primary" style="float: right;margin-top: 2rem;">Xem Chi Tiết</a>' .
                 '</div>' .
                 '</div>';
         }

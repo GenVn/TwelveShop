@@ -39,10 +39,10 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td><img src="/CuaHangNoiThat/public/image/Empty.jpg" alt="empty_Image" style="width: 10rem;"></td>
+                <td><img src="/TwelveShop/public/image/Empty.jpg" alt="empty_Image" style="width: 10rem;"></td>
                 <td></td>
                 <td>
-                    <a href="/CuaHangNoiThat/Admin/SuaSanPham?id=1">
+                    <a href="/TwelveShop/Admin/SuaSanPham?id=1">
                         <button class="btn btn-primary btnControl" type="submit" style="background-color: green;">Sửa sản phẩm</button>
                     </a>
                     

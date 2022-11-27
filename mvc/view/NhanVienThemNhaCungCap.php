@@ -30,7 +30,7 @@
     </div>
 
 
-    <a href="/CuaHangNoiThat/NhanVien/NhaCungCap">
+    <a href="/TwelveShop/NhanVien/NhaCungCap">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="addNewSupplier();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Nhà Cung Cấp</button>
@@ -65,7 +65,7 @@
         'SDT': $phoneSupplier
       };
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/addNewSupplier',
+        url: '/TwelveShop/Admin/addNewSupplier',
         data: {
           data: $objSupplier
         },
@@ -92,7 +92,7 @@
         var form_data = new FormData();
         form_data.append('file', file_data);
         $.ajax({
-          url: '/CuaHangNoiThat/Admin/readExcelSupplier',
+          url: '/TwelveShop/Admin/readExcelSupplier',
           cache: false,
           contentType: false,
           processData: false,
@@ -144,7 +144,7 @@
 
     function addNewSupplier_wtihData($obj) {
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/addNewSupplier',
+        url: '/TwelveShop/Admin/addNewSupplier',
         data: {
           data: $obj
         },
@@ -161,7 +161,7 @@
 
     function updateSupplier_wtihData($obj) {
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/updateInformationSupplier',
+        url: '/TwelveShop/Admin/updateInformationSupplier',
         data: {
           data: $obj
         },

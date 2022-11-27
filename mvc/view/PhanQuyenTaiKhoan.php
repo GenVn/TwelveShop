@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phân Quyền Tài Khoản</title>
-    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/TwelveShop/bootstrap-5.1.3-dist/css/bootstrap.min.css" />
     <style>
         .ctrBtn {
             width: 10rem;
@@ -55,7 +55,7 @@
             <div class="account-authorization__end d-flex flex-row-reverse">
                 <div class="row">
                     <div class="col">
-                        <a href="/CuaHangNoiThat/Admin/NhanVien"><button type="button" class="btn btn-primary">Trở về</button></a>
+                        <a href="/TwelveShop/Admin/NhanVien"><button type="button" class="btn btn-primary">Trở về</button></a>
 
                         <button type="button" class="btn btn-success" onclick="getAllSelectedCheckBox();">Lưu</button>
                     </div>
@@ -372,7 +372,7 @@
 
             
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/updateRightOfStaff',
+                url: '/TwelveShop/Admin/updateRightOfStaff',
                 data: {
                     id:idEditStaff,
                     right:strList
@@ -380,7 +380,7 @@
                 method: 'post',
                 success: function(data) {
                     if(data == 0){
-                        window.location.href = '/CuaHangNoiThat/Admin/NhanVien';
+                        window.location.href = '/TwelveShop/Admin/NhanVien';
                     }
                     else{
 

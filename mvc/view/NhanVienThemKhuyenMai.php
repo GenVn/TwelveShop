@@ -26,7 +26,7 @@
       <label for="exampleInputEmail1">Phần Trăm Giảm </label>
       <input type="number" class="form-control" id="decreaseSale">
     </div>
-    <a href="/CuaHangNoiThat/NhanVien/KhuyenMai">
+    <a href="/TwelveShop/NhanVien/KhuyenMai">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="addNewSale();" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Khuyến Mãi</button>
@@ -65,7 +65,7 @@
       };
 
       $.ajax({
-        url : '/CuaHangNoiThat/Admin/addNewSale',
+        url : '/TwelveShop/Admin/addNewSale',
         method:'post',
         data:{data:$obj},
         success: function(data){

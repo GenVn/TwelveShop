@@ -54,7 +54,7 @@
                 <th scope="row">' . $count++ . '</th>
                 <td>' . $value['MASP'] . '</td>
                 <td>' . $value['TENSP'] . '</td>
-                <td><img style="width: 10rem;height: 5rem;" src="/CuaHangNoiThat/public/image/HINHANH/' . $value['HINHANH'] . '" alt=""></td>
+                <td><img style="width: 10rem;height: 5rem;" src="/TwelveShop/public/image/HINHANH/' . $value['HINHANH'] . '" alt=""></td>
                 <td>' . $value['SOLUONG'] . '</td>
                 <td>' . $value['PHANTRAMGIAM'] . '%</td>
                 <td>' . number_format($value['GIA']) . ' VNĐ</td>

@@ -24,7 +24,7 @@
     <label for="exampleInputEmail1">Mô Tả</label>
     <textarea id="descriptionTypeProduct" style="width: 100%;" rows="10"></textarea>
 
-    <a href="/CuaHangNoiThat/Admin/LoaiSanPham">
+    <a href="/TwelveShop/Admin/LoaiSanPham">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="addNewTypeProduct();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Loại Sản Phẩm</button>
@@ -51,7 +51,7 @@
       }
 
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/addNewTypeProduct',
+        url: '/TwelveShop/Admin/addNewTypeProduct',
         data: {
           data: $obj
         },
@@ -79,7 +79,7 @@
         var form_data = new FormData();
         form_data.append('file', file_data);
         $.ajax({
-          url: '/CuaHangNoiThat/Admin/readExcelTypeProduct',
+          url: '/TwelveShop/Admin/readExcelTypeProduct',
           cache: false,
           contentType: false,
           processData: false,
@@ -130,7 +130,7 @@
 
     function updateInfoTypeProduct($subobj) {
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/updateInformationProductType/'+$subobj,
+        url: '/TwelveShop/Admin/updateInformationProductType/'+$subobj,
         data: {
           data: $obj
         },
@@ -141,7 +141,7 @@
     function addNewTypeProduct($obj) {
       
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/addNewTypeProduct/'+$obj,
+        url: '/TwelveShop/Admin/addNewTypeProduct/'+$obj,
         data: {
           data: $obj
         },

@@ -49,7 +49,7 @@
       <input type="text" class="form-control" id="passwordStaff" value="">
     </div>
 
-    <a href="/CuaHangNoiThat/Admin/NhanVien">
+    <a href="/TwelveShop/Admin/NhanVien">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="addNewStaff();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Nhân Viên</button>
@@ -114,7 +114,7 @@
       }
 
       $.ajax({
-        url: '/CuaHangNoiThat/Admin/addNewStaff',
+        url: '/TwelveShop/Admin/addNewStaff',
         method: 'post',
         data: {
           data: $obj
@@ -148,7 +148,7 @@
         var form_data = new FormData();
         form_data.append('file', file_data);
         $.ajax({
-          url: '/CuaHangNoiThat/Admin/readExcelStaff',
+          url: '/TwelveShop/Admin/readExcelStaff',
           cache: false,
           contentType: false,
           processData: false,
@@ -199,7 +199,7 @@
                   }
 
                   $.ajax({
-                    url: '/CuaHangNoiThat/Admin/addNewStaffWithId',
+                    url: '/TwelveShop/Admin/addNewStaffWithId',
                     method: 'post',
                     data: {
                       data: $obj

@@ -28,7 +28,7 @@
     <label for="exampleInputEmail1">Mô Tả</label>
     <textarea style="width: 100%;" rows="5" id="descriptionType"><?php echo $data['MOTA']?></textarea>
     
-    <a href="/CuaHangNoiThat/Admin/LoaiSanPham">
+    <a href="/TwelveShop/Admin/LoaiSanPham">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="editInfor();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Sửa Thông Tin</button>
@@ -53,7 +53,7 @@
       $obj = {'MALOAI':$idType,'TENLOAI':$nameType,'MOTA':$descriptionType}
 
       $.ajax({
-        url:'/CuaHangNoiThat/Admin/updateInformationProductType',
+        url:'/TwelveShop/Admin/updateInformationProductType',
         data :{data:$obj},
         method:'post',
         success: function(data){

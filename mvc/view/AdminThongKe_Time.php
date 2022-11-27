@@ -108,7 +108,7 @@
 
 <body>
     <div>
-    <button class="btn btn-warning" onclick="window.location.href='/CuaHangNoiThat/Admin/ThongKe'">Trở về</button>
+    <button class="btn btn-warning" onclick="window.location.href='/TwelveShop/Admin/ThongKe'">Trở về</button>
         <button class="btn btn-primary" onclick="printToImage('#statisticExport','ThongKeTheoThoiGianTu_<?php echo $data['time']['from'];?>_den_<?php echo $data['time']['to'];?>')">Xuất Hình Ảnh</button>
     </div>
     <div style="width: 1200px;" id="statisticExport">

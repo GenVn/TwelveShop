@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/CuaHangNoiThat/my-css.css">
+    <link rel="stylesheet" href="/TwelveShop/my-css.css">
     <title><?php echo $title; ?></title>
 </head>
 
@@ -23,8 +23,8 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">
         <div class="container-fluid">
-            <a class="navar-branch" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">
-                <img src="/CuaHangNoiThat/public/image/logo.png" alt="logo" height="60px">
+            <a class="navar-branch" style="cursor: pointer;" href="/TwelveShop/TrangChu">
+                <img src="/TwelveShop/public/image/logo.png" alt="logo" height="60px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto " id="lsp">
                     <li class="nav-item active">
-                        <a class="nav-link a active" style="cursor: pointer;" href="./TrangChu.php">TRANG CHỦ</a>
+                        <a class="nav-link a active" style="cursor: pointer;" href="/TwelveShop/TrangChu.php">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./AoQuan">ÁO & QUẦN</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/AoQuan">ÁO & QUẦN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./Balo">BALO</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./PhuKien">PHỤ KIỆN CÁC LOẠI</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -55,19 +55,19 @@
                     <div class="dropdown-content user" style="margin-top: -0.5rem;">
                         <?php 
                             if (!isset($_SESSION['account'])) {
-                                echo '<a href="/CuaHangNoiThat/DangNhap">Đăng nhập</a>';
-                                echo '<a href="/CuaHangNoiThat/DangKy">Đăng ký</a>';
+                                echo '<a href="/TwelveShop/DangNhap">Đăng nhập</a>';
+                                echo '<a href="/TwelveShop/DangKy">Đăng ký</a>';
                             }
                             else{
-                                echo '<a href="/CuaHangNoiThat/ThayDoiThongTin">Thay đổi thông tin</a>
-                                <a href="/CuaHangNoiThat/DoiMatKhau">Đổi mật khẩu</a>
-                                <a href="/CuaHangNoiThat/LichSuGioHang">Lịch sử</a>
-                                <a href="/CuaHangNoiThat/TrangChu/Logout">Đăng xuất</a>';
+                                echo '<a href="/TwelveShop/ThayDoiThongTin">Thay đổi thông tin</a>
+                                <a href="/TwelveShop/DoiMatKhau">Đổi mật khẩu</a>
+                                <a href="/TwelveShop/LichSuGioHang">Lịch sử</a>
+                                <a href="/TwelveShop/TrangChu/Logout">Đăng xuất</a>';
                             }
                         ?>                        
                     </div>
                 </div>
-                <a href="/CuaHangNoiThat/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
+                <a href="/TwelveShop/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
                 <span id="counter">
                     <?php
                     if (isset($_SESSION['cart'])) {
@@ -141,12 +141,12 @@
 
             const arr = new Array($name, $address, $phone, $sex,$birthday);
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/saveInfoAccount/'+ JSON.stringify(arr),
+                url: '/TwelveShop/Admin/saveInfoAccount/'+ JSON.stringify(arr),
                 success: function(data) {
                     var data = JSON.parse(data);
                     alert(data.SMS);
                     if(data.SMS === 'Cập nhật thành công'){
-                        window.location.href = '/CuaHangNoiThat';
+                        window.location.href = '/TwelveShop';
                     }
                 }
             });

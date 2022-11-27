@@ -53,7 +53,7 @@
 
         </div>
 
-        <a href="/CuaHangNoiThat/NhanVien/PhieuNhap">
+        <a href="/TwelveShop/NhanVien/PhieuNhap">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
         </a>
         <button onclick="addReceiptToDB();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Phiếu Nhập</button>
@@ -335,7 +335,7 @@
                 form_data.append('file', file_data);
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/uploadImage',
+                    url: '/TwelveShop/Admin/uploadImage',
                     dataType: 'text', // what to expect back from the server
                     cache: false,
                     contentType: false,
@@ -526,7 +526,7 @@
             $supId = $("#supplierId").val();
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/AddReceiptToDb',
+                url: '/TwelveShop/Admin/AddReceiptToDb',
                 data: {
                     staffid: $idStaff,
                     supplierId: $supId,
@@ -560,7 +560,7 @@
                 var form_data = new FormData();
                 form_data.append('file', file_data);
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/readDetailReceiptFromFile',
+                    url: '/TwelveShop/Admin/readDetailReceiptFromFile',
                     cache: false,
                     contentType: false,
                     processData: false,
@@ -623,7 +623,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/createAutoProductId',
+                url: '/TwelveShop/Admin/createAutoProductId',
                 success: function(data) {
 
                     var data = JSON.parse(data);

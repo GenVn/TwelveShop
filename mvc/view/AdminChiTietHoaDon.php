@@ -24,7 +24,7 @@
 <body>
     <h1 style="margin-top: 5rem;margin-left: 10%;"><?php echo $title; ?></h1>
     <div>
-        <a href="/CuaHangNoiThat/Admin/HoaDon">
+        <a href="/TwelveShop/Admin/HoaDon">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;margin-left: 10%;">Trở về </button>
         </a>
     </div>
@@ -58,7 +58,7 @@
                 <th scope="row">' . $count++ . '</th>
                 <td>' . $value['MASP'] . '</td>
                 <td>' . $value['TENSP'] . '</td>
-                <td><img style="width: 10rem;height: 5rem;" src="/CuaHangNoiThat/public/image/HINHANH/' . $value['HINHANH'] . '" alt=""></td>
+                <td><img style="width: 10rem;height: 5rem;" src="/TwelveShop/public/image/HINHANH/' . $value['HINHANH'] . '" alt=""></td>
                 <td>' . $value['SOLUONG'] . '</td>
                 <td>' . $value['PHANTRAMGIAM'] . '%</td>
                 <td>' . number_format($value['GIA']) . ' VNĐ</td>

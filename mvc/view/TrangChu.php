@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/CuaHangNoiThat/my-css.css">
+    <link rel="stylesheet" href="/TwelveShop/my-css.css">
     <title>Trang Chủ</title>
 </head>
 
@@ -23,8 +23,8 @@
     </div>
     <nav class="navbar sticky-top navbar-expand-md navbar-light ">
         <div class="container-fluid">
-            <a class="navar-branch" style="cursor: pointer;" href="/CuaHangNoiThat/TrangChu">
-                <img src="/CuaHangNoiThat/public/image/logo.png" alt="logo" height="60px">
+            <a class="navar-branch" style="cursor: pointer;" href="/TwelveShop/TrangChu">
+                <img src="/TwelveShop/public/image/logo.png" alt="logo" height="60px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto " id="lsp">
                     <li class="nav-item active">
-                        <a class="nav-link a active" style="cursor: pointer;" href="./TrangChu.php">TRANG CHỦ</a>
+                        <a class="nav-link a active" style="cursor: pointer;" href="/TwelveShop/TrangChu.php">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./AoQuan">ÁO & QUẦN</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/AoQuan">ÁO & QUẦN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./Balo">BALO</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/Balo">BALO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link a" style="cursor: pointer;" href="./PhuKien">PHỤ KIỆN CÁC LOẠI</a>
+                        <a class="nav-link a" style="cursor: pointer;" href="/TwelveShop/PhuKien">PHỤ KIỆN CÁC LOẠI</a>
                     </li>
                 </ul>
             </div>
@@ -55,18 +55,18 @@
                     <div class="dropdown-content user" style="margin-top: -0.5rem;">
                         <?php
                         if (!isset($_SESSION['account'])) {
-                            echo '<a href="./DangNhap">Đăng nhập</a>';
-                            echo '<a href="./DangKy">Đăng ký</a>';
+                            echo '<a href="/TwelveShop/DangNhap">Đăng nhập</a>';
+                            echo '<a href="/TwelveShop/DangKy">Đăng ký</a>';
                         } else {
-                            echo '<a href="./ThayDoiThongTin">Thay đổi thông tin</a>
-                                <a href="./DoiMatKhau">Đổi mật khẩu</a>
-                                <a href="./LichSuGioHang">Lịch sử</a>
-                                <a href="./TrangChu/Logout">Đăng xuất</a>';
+                            echo '<a href="/TwelveShop/ThayDoiThongTin">Thay đổi thông tin</a>
+                                <a href="/TwelveShop/DoiMatKhau">Đổi mật khẩu</a>
+                                <a href="/TwelveShop/LichSuGioHang">Lịch sử</a>
+                                <a href="/TwelveShop/TrangChu/Logout">Đăng xuất</a>';
                         }
                         ?>
                     </div>
                 </div>
-                <a href="/CuaHangNoiThat/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
+                <a href="/TwelveShop/GioHang" style="cursor: pointer;"><i class="fa fa-shopping-cart"></i></a>
                 <span id="counter">
                     <?php
                     if (isset($_SESSION['cart'])) {
@@ -84,7 +84,7 @@
         </div>
     </nav>
     <div class="banner">
-        <img style="object-fit: contain" src="/CuaHangNoiThat/public/image/BANNER-CHINH.png" alt="">
+        <img style="object-fit: contain" src="/TwelveShop/public/image/BANNER-CHINH.png" alt="">
     </div>
 
     <h2 class="title">
@@ -94,7 +94,7 @@
     <div style="margin-top: 2rem;width: 80%;margin-left: 10%;margin-top: 2rem;" id="sale_product">
         <!-- <div class="card border-primary mb-3" style="float: left;width: 20rem;margin-right: 1rem;">
             <div class="card-body text-primary">
-                <img src="/CuaHangNoiThat/public/image/HINHANH/sofa.jpg" alt="no image" style="width: 18rem;height: 18rem;">
+                <img src="/TwelveShop/public/image/HINHANH/sofa.jpg" alt="no image" style="width: 18rem;height: 18rem;">
                 <p style="width: auto;height: auto;color: red;font-size: 1.8rem;position: absolute;top: 10%;left: 80%;background-color: yellow;border-radius: 0.2rem;font-weight: bolder;">-5%</p>
             </div>
             <div class="card-header" style="height: 5rem;"></div>
@@ -112,20 +112,20 @@
     </p>
     <div class="category-container">
         <div class="category">
-            <a href="./AoQuan.php">
-                <img src="/CuaHangNoiThat/public/image/cate-1.jpg" alt="cate-1">
+            <a href="/TwelveShop/AoQuan.php">
+                <img src="/TwelveShop/public/image/cate-1.jpg" alt="cate-1">
                 <p>Áo & Quần</p>
             </a>
         </div>
         <div class="category">
-            <a href="./Balo.php">
-                <img src="/CuaHangNoiThat/public/image/cate-2.jpg" alt="cate-2">
+            <a href="/TwelveShop/Balo.php">
+                <img src="/TwelveShop/public/image/cate-2.jpg" alt="cate-2">
                 <p>Balo</p>
             </a>
         </div>
         <div class="category">
-            <a href="./PhuKien.php">
-                <img src="/CuaHangNoiThat/public/image/cate-3.jpg" alt="cate-3">
+            <a href="/TwelveShop/PhuKien.php">
+                <img src="/TwelveShop/public/image/cate-3.jpg" alt="cate-3">
                 <p>Phụ Kiện</p>
             </a>
         </div>
@@ -140,10 +140,10 @@
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <img src="/CuaHangNoiThat/public/image/Banner_phu_2.jpg" alt="1" width="100%" height="100%">
+                <img src="/TwelveShop/public/image/Banner_phu_2.jpg" alt="1" width="100%" height="100%">
             </div>
             <div class="carousel-item">
-                <img src="/CuaHangNoiThat/public/image/banner_phu_3.jpg" alt="2" width="100%" height="100%">
+                <img src="/TwelveShop/public/image/banner_phu_3.jpg" alt="2" width="100%" height="100%">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
@@ -157,7 +157,7 @@
     </div><br><br>
     <div class="info-container">
         <div class="info">
-            <img src="/CuaHangNoiThat/public/image/Banner_phu_1.jpg" alt="">
+            <img src="/TwelveShop/public/image/Banner_phu_1.jpg" alt="">
         </div>
         <div class="info">
             <h2>THIẾT KẾ HIỆN ĐẠI</h2><br>
@@ -170,7 +170,7 @@
     </div><br>
     <div class="footer-container">
         <div class="footer">
-            <img src="/CuaHangNoiThat/public/image/logo.png" alt="">
+            <img src="/TwelveShop/public/image/logo.png" alt="">
         </div>
         <div class="footer">
             <a href="">GIAO HÀNG</a><br>
@@ -194,7 +194,7 @@
     <script>
         $(document).ready(function() {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getSaleProduct/5',
+                url: '/TwelveShop/Admin/getSaleProduct/5',
                 success: function(data) {
                     var data = JSON.parse(data)
                     $xhtml = "";
@@ -203,7 +203,7 @@
                         $obj = data[key]
                         $xhtml += '<div class="card border-primary mb-3" style="'+($obj.MASP == lastItem.MASP ? '':'float: left;')+'width: 20rem;margin-right: 1rem;">' +
                             '<div class="card-body text-primary">' +
-                            '<a href="/CuaHangNoiThat/ChiTietSanPham/SanPham/'+$obj.MASP+'"><img src="/CuaHangNoiThat/public/image/HINHANH/'+$obj.HINHANH+'" alt="no image" style="width: 18rem;height: 18rem;"></a>' +
+                            '<a href="/TwelveShop/ChiTietSanPham/SanPham/'+$obj.MASP+'"><img src="/TwelveShop/public/image/HINHANH/'+$obj.HINHANH+'" alt="no image" style="width: 18rem;height: 18rem;"></a>' +
                             '<p style="width: auto;height: auto;color: red;font-size: 1.8rem;position: absolute;top: 10%;left: 80%;background-color: yellow;border-radius: 0.2rem;font-weight: bolder;">-'+$obj.PHANTRAMGIAM+'%</p>' +
                             '</div>' +
                             '<div class="card-header" style="height: 5rem;">'+$obj.TENSP+'</div>' +

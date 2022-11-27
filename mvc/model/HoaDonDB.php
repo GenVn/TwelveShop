@@ -226,7 +226,7 @@ class HoaDonDB extends ConnectionDB
 
     function updateBillStatus_Ex($id,$staffId,$status)
     {
-        $qry = "UPDATE `hoadon` SET `MATRANGTHAI`='$status',`MANV_XUAT`='$staffId' WHERE `MAHD`='$id';";
+        $qry = "UPDATE `hoadon` SET `MATRANGTHAI`='$status',`MANV`='$staffId' WHERE `MAHD`='$id';";
         if (mysqli_query($this->conn, $qry)) {
             return true;
         }
@@ -307,7 +307,7 @@ class HoaDonDB extends ConnectionDB
             $objWriter = new Xlsx($objPHPExcel);
             $filename = 'Bill'.date("dmY_His").'.xlsx';
             $objWriter->save('./public/excel/'.$filename);
-            $result['NAME'] = '/CuaHangNoiThat/public/excel/'.$filename;
+            $result['NAME'] = './public/excel/'.$filename;
         } catch (Exception $e) {
             $result['ERROR'] = $e->getMessage();
         }

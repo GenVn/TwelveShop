@@ -1,5 +1,5 @@
 <?php
-    //http://127.0.0.1/CuaHangNoiThat/Run
+    //http://127.0.0.1/Run
     class Run extends Controller{
         function display(){
             //model cần chạy

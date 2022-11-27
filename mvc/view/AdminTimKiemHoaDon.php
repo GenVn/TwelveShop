@@ -87,7 +87,7 @@
                 <input type="text" class="form-control" id="inputYear">
             </div>
         </div>
-        <a href="/CuaHangNoiThat/Admin/HoaDon">
+        <a href="/TwelveShop/Admin/HoaDon">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #007bff;">Trở về </button>
         </a>
         <button type="submit" onclick="searchBill();" class="btn btn-primary">Tìm kiếm </button>
@@ -140,7 +140,7 @@
 
 
             $.ajax({
-                url: "/CuaHangNoiThat/Admin/getAllBill",
+                url: "/TwelveShop/Admin/getAllBill",
                 success : function(data){
                     var data = JSON.parse(data);
                     var xhtml = '<thead>' +
@@ -205,7 +205,7 @@
                                 xhtml += '<button onclick="confirmBill(\''+data[i]['MAHD']+'\');" class="btn btn-primary btnControl" type="submit" style="background-color: red;" onclick="">Xác nhận hóa đơn</button>';
                             }
                             xhtml += '<button  onclick="viewBillDetail(\'' + data[i]['MAHD'] + '\');" class="btn btn-primary btnControl" type="submit" style="background-color: #007bff;margin-top: 0.3rem;">In hóa đơn</button>' +
-                                '<a href="/CuaHangNoiThat/Admin/XemChiTietHD/' + data[i].MAHD + '">' +
+                                '<a href="/TwelveShop/Admin/XemChiTietHD/' + data[i].MAHD + '">' +
                                 '<button class="btn btn-primary btnControl" type="submit" style="background-color: green;margin-top: 0.3rem;">Xem chi tiết</button>' +
                                 '</a>' +
                                 '</td>' +
@@ -220,7 +220,7 @@
         }
         function viewBillDetail($id) {
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/getBillAndDetail',
+                url: '/TwelveShop/Admin/getBillAndDetail',
                 data: {
                     'id': $id
                 },

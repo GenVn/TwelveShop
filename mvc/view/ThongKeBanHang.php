@@ -86,7 +86,7 @@
             }
 
 
-            window.location.href = "/CuaHangNoiThat/NhanVien/ThongKeTheoTG/" + $monthFrom + '/' + $monthTo;
+            window.location.href = "/TwelveShop/NhanVien/ThongKeTheoTG/" + $monthFrom + '/' + $monthTo;
 
         }
 
@@ -102,7 +102,7 @@
 
             
 
-            window.location.href = "/CuaHangNoiThat/NhanVien/ThongKeDoanhThu/" + $monthFrom;
+            window.location.href = "/TwelveShop/NhanVien/ThongKeDoanhThu/" + $monthFrom;
         }
     </script>
 </body>

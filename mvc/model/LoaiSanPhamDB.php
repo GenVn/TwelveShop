@@ -108,7 +108,7 @@ class LoaiSanPhamDB extends ConnectionDB
             $objWriter = new Xlsx($objPHPExcel);
             $filename = 'TypeProduct'.date("dmY_His").'.xlsx';
             $objWriter->save('./public/excel/'.$filename);
-            $result['NAME'] = '/CuaHangNoiThat/public/excel/'.$filename;
+            $result['NAME'] = './public/excel/'.$filename;
         } catch (Exception $e) {
             $result['ERROR'] = $e->getMessage();
         }

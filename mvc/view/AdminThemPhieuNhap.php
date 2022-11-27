@@ -53,7 +53,7 @@
 
         </div>
 
-        <a href="/CuaHangNoiThat/Admin/PhieuNhap">
+        <a href="/TwelveShop/Admin/PhieuNhap">
             <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
         </a>
         <button onclick="addReceiptToDB();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Thêm Phiếu Nhập</button>
@@ -118,14 +118,17 @@
                 </div>
                 <input type="text" value="" style="font-size: 1rem;width: 15rem;" readonly id="currentImage">
                 <button onclick="changeCurrentImage();" class="btn btn-primary" style="width: 15rem;">Thay đổi hình ảnh</button>
+            
             </div>
-            <div style="width: 100%;" id="addControl">
-                <button onclick="addItemToDetail();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1em;margin-top: 2rem;float: right;margin-left:1rem;">Thêm Chi Tiết</button>
-                <button onclick="refreshInput();" type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1em;margin-top: 2rem;float: right;margin-left: 2rem;">Làm Lại</button>
-            </div>
-            <div style="width: 100%;" id="editControl">
-                <button onclick="addItemToDetail();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1em;margin-top: 2rem;float: right;margin-left:1rem;">Thêm Chi Tiết</button>
-                <button onclick="cancelEditItem();" type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1em;margin-top: 2rem;float: right;margin-left: 2rem;">Hủy Bỏ</button>
+            <div class="form-group col-md-5">
+                <div style="width: 100%;" id="addControl">
+                    <button onclick="addItemToDetail();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1em;margin-top: 2rem;float: right;margin-left:1rem;">Thêm Chi Tiết</button>
+                    <button onclick="refreshInput();" type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1em;margin-top: 2rem;float: right;margin-left: 2rem;">Làm Lại</button>
+                </div>
+                <div style="width: 100%;" id="editControl">
+                    <button onclick="addItemToDetail();" type="submit" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1em;margin-top: 2rem;float: right;margin-left:1rem;">Thêm Chi Tiết</button>
+                    <button onclick="cancelEditItem();" type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1em;margin-top: 2rem;float: right;margin-left: 2rem;">Hủy Bỏ</button>
+                </div>
             </div>
         </div>
     </div>
@@ -335,7 +338,7 @@
                 form_data.append('file', file_data);
 
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/uploadImage',
+                    url: '/TwelveShop/Admin/uploadImage',
                     dataType: 'text', // what to expect back from the server
                     cache: false,
                     contentType: false,
@@ -526,7 +529,7 @@
             $supId = $("#supplierId").val();
 
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/AddReceiptToDb',
+                url: '/TwelveShop/Admin/AddReceiptToDb',
                 data: {
                     staffid: $idStaff,
                     supplierId: $supId,
@@ -560,7 +563,7 @@
                 var form_data = new FormData();
                 form_data.append('file', file_data);
                 $.ajax({
-                    url: '/CuaHangNoiThat/Admin/readDetailReceiptFromFile',
+                    url: '/TwelveShop/Admin/readDetailReceiptFromFile',
                     cache: false,
                     contentType: false,
                     processData: false,
@@ -623,7 +626,7 @@
                 return;
             }
             $.ajax({
-                url: '/CuaHangNoiThat/Admin/createAutoProductId',
+                url: '/TwelveShop/Admin/createAutoProductId',
                 success: function(data) {
 
                     var data = JSON.parse(data);

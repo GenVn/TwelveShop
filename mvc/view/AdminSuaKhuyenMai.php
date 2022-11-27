@@ -26,7 +26,7 @@
     </div>
     <label for="exampleInputEmail1">Ngày Kết Thúc</label>
     <input type="date" class="form-control" value="<?php echo $data['NGAYKT'];?>" id="endSale">
-    <a href="/CuaHangNoiThat/Admin/KhuyenMai">
+    <a href="/TwelveShop/Admin/KhuyenMai">
       <button type="submit" class="btn btn-primary" style="background-color: white;color: #0066cc;font-size: 1.5rem;margin-top: 2rem;">Trở về </button>
     </a>
     <button onclick="editSale();" class="btn btn-primary" style="background-color: #0066cc;color: white;font-size: 1.5rem;margin-top: 2rem;float: right;">Sửa Khuyến Mãi</button>
@@ -53,7 +53,7 @@
       $obj = {'MAKM':$idSale,'NGAYBD':$startSale,'NGAYKT':$endSale};
 
       $.ajax({
-        url : '/CuaHangNoiThat/Admin/updateInforSale',
+        url : './Admin/updateInforSale',
         method:'post',
         data:{data:$obj},
         success: function(data){
